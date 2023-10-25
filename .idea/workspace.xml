@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Initial Commit Project Creation">
+    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Added Jenkins file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,6 +70,11 @@
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New" />
+    </key>
+  </component>
   <component name="RunManager" selected="Gradle.TestNGRunner.openTheReportUrl (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
@@ -130,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698027893243</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Jenkins file">
+      <created>1698201879378</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698201879378</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +158,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit Project Creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit Project Creation" />
+    <MESSAGE value="Added Jenkins file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Jenkins file" />
   </component>
 </project>
