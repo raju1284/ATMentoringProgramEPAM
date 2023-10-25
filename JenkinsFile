@@ -17,7 +17,7 @@ pipeline {
     {
         steps{
              script{
-                    runTheGradleBuildArtifactoryPlugin("clean build ")
+                    runTheGradleBuildArtifactoryPlugin("clean build")
              }
          }
     }
