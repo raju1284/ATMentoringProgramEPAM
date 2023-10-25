@@ -4,8 +4,7 @@ pipeline {
     triggers{
     githubPush()
     }
-    tools{
-    jdk 'JDK 1.11'}
+
   stages{
     stage('Checkout from github') {
 
