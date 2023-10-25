@@ -17,7 +17,7 @@ pipeline {
     {
         steps{
              script{
-                    runTheGradleBuildArtifactoryPlugin("clean build test -DskipTests=true -Dwebdriver.driver=edge")
+                    runTheGradleBuildArtifactoryPlugin("clean build test -DskipTests=true --info -Dwebdriver.driver=edge")
              }
          }
     }
