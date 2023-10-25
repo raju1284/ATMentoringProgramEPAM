@@ -14,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.event.EventRecodingLogger;
 import utilities.readPropertyFile;
 
+
 import java.io.IOException;
 
 import static org.openqa.selenium.remote.CapabilityType.PROXY;
@@ -31,6 +32,10 @@ public class BaseTest {
       }
       if (browser.equalsIgnoreCase("edge"))
         {
+
+            System.setProperty("webdriver.edge.driver",
+                    System.getProperty("user.dir")+"\\"+"src\\test\\resources\\drivers\\msedgedriver.exe");
+
             EdgeOptions options = new EdgeOptions();
             options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
             options.addArguments("--remote-allow-origins=*");
