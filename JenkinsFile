@@ -1,25 +1,36 @@
 pipeline {
     agent any
 
-    triggers {
-            cron('H */8 * * *') //regular builds
-            pollSCM('* * * * *') //polling for changes, here once a minute
-        }
+    triggers{
+    githubPush()
+    }
+    tools{
+    jdk 'JDK 1.11'}
 
-        stages {
-            stage('Checkout') {
-                steps { //Checking out the repo
-                    checkout scm
-                     }
+    stage('Checkout from github') {
+
+            steps {
+                checkout scm
+
             }
-            stage('Build') {
-                steps {
-                    script {
-
-                            sh './gradlew clean build'  //run a gradle task
-
-                    }
-                }
-            }
-        }
+    }
+    stage ('Build Project')
+    {
+        steps{
+             script{
+                    runTheGradleBuildArtifactoryPlugin("clean build ")
+             }
+         }
+    }
+    def runTheGradleBuildArtifactoryPlugin(String command){
+    println "running the artifactory plugin gradle build"
+    println "command: ${command}"
+    def rtGradle =Artifactory.newGradleBuild()
+    rtGradle.deployer.deployMavenDescriptors= true
+    rtGradle.deployer.deployIvyDescriptors= false
+    rtGradle.deployer.deployArtifacts= false
+    rtGradle.useWrapper=true
+    sh chmod +x gradlew
+    rtGradle.run rootDir: ".", buildFile: 'build.gradle', switches: '-g .gradle ',tasks: "{$command}".toString()
+    }
 }
