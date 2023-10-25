@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Updated  build.gradle">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/drivers/msedgedriver.exe" afterDir="false" />
+    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Added the edge webdriver file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -264,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698251416589</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added the edge webdriver file">
+      <created>1698252749579</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1698252749579</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -284,6 +291,7 @@
     <MESSAGE value="Updated Jnekins Jenkins file" />
     <MESSAGE value="Updated  Jenkins file" />
     <MESSAGE value="Updated  build.gradle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated  build.gradle" />
+    <MESSAGE value="Added the edge webdriver file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the edge webdriver file" />
   </component>
 </project>

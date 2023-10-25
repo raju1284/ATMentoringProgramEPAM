@@ -25,26 +25,26 @@ public class BaseTest {
     private final static Logger logger = LoggerFactory.getLogger(BaseTest.class);
 
     public WebDriver getDriver() throws IOException {
-        String browser="";
-      if (driver==null)
-      {
-           browser =  fr.getPropertyValue("browser");
-      }
-      if (browser.equalsIgnoreCase("edge"))
+
+        String browser =  fr.getPropertyValue("browser");
+
+            if (browser.equalsIgnoreCase("edge"))
         {
+          try {
+              System.setProperty("webdriver.edge.driver",
+                      System.getProperty("user.dir") + "\\" + "src\\test\\resources\\drivers\\msedgedriver.exe");
 
-            System.setProperty("webdriver.edge.driver",
-                    System.getProperty("user.dir")+"\\"+"src\\test\\resources\\drivers\\msedgedriver.exe");
+              EdgeOptions options = new EdgeOptions();
+              options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+              options.addArguments("--remote-allow-origins=*");
+              options.setCapability("ignore-certificate-errors", true);
 
-            EdgeOptions options = new EdgeOptions();
-            options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
-            options.addArguments("--remote-allow-origins=*");
-            options.setCapability("ignore-certificate-errors", true);
-
-            WebDriverManager.edgedriver().avoidResolutionCache().proxy(PROXY).setup();
-            driver = new EdgeDriver(options);
-
-
+              WebDriverManager.edgedriver().avoidResolutionCache().proxy(PROXY).setup();
+              driver = new EdgeDriver(options);
+          }
+          catch (Exception exp){
+              exp.printStackTrace();
+          }
         }
       return driver;
     }
