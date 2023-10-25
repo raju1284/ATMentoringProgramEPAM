@@ -23,7 +23,3 @@ dependencies {
     testImplementation 'io.rest-assured:json-path:5.3.0'
 
 }
-
-test {
-    useTestNG()
-}
