@@ -32,5 +32,5 @@ def runTheGradleBuildArtifactoryPlugin(String command){
     rtGradle.deployer.deployArtifacts= false
     rtGradle.useWrapper=true
   //  sh 'chmod +x gradlew'
-    rtGradle.run rootDir: ".", buildFile: 'build.gradle', switches: '-g .gradle ',tasks: "{$command}".toString()
+    rtGradle.run rootDir: ".", buildFile: 'build.gradle', switches: '-g .gradle ', tasks: "${command}".toString()
 }
