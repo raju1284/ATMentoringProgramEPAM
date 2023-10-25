@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class TestNGRunner extends BaseTest {
     readPropertyFile fr = new readPropertyFile();
-    public static WebDriver driver;
+
 
     @Test
     public void openTheReportUrl() throws IOException {

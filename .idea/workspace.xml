@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Updated Jenkins to include --info to add more logs in Jnekins">
+    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Updated TestNg runner">
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/TestNGRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/TestNGRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -283,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698258894327</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Updated TestNg runner">
+      <created>1698259179873</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1698259179873</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -306,6 +313,7 @@
     <MESSAGE value="Added the edge webdriver file" />
     <MESSAGE value="Updated Jenkins to skip the tests" />
     <MESSAGE value="Updated Jenkins to include --info to add more logs in Jnekins" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Jenkins to include --info to add more logs in Jnekins" />
+    <MESSAGE value="Updated TestNg runner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated TestNg runner" />
   </component>
 </project>
