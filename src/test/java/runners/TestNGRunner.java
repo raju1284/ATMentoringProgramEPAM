@@ -10,12 +10,13 @@ import java.io.IOException;
 
 public class TestNGRunner extends BaseTest {
     readPropertyFile fr = new readPropertyFile();
+    public static WebDriver driver;
 
     @Test
     public void openTheReportUrl() throws IOException {
-       getDriver();
-       navigateToUrl(fr.getPropertyValue("reportPortal"));
-       Assert.assertEquals(getTitle(),"Report Portal");
-       driverClose();
+        driver = getDriver();
+        driver.get(fr.getPropertyValue("reportPortal"));
+        Assert.assertEquals(driver.getTitle(), "Report Portal");
+        driver.close();
     }
 }
