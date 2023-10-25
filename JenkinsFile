@@ -26,6 +26,11 @@ pipeline {
 def runTheGradleBuildArtifactoryPlugin(String command){
     println "running the artifactory plugin gradle build"
     println "command: ${command}"
+    def rtGradle = Artifactory.newGradleBuild()
+    rtGradle.deployer.deployMavenDescriptors= true
+    rtGradle.deployer.deployIvyDescriptors= false
+    rtGradle.deployer.deployArtifacts= false
+    rtGradle.useWrapper=true
     sh chmod +x gradlew
     rtGradle.run rootDir: ".", buildFile: 'build.gradle', switches: '-g .gradle ',tasks: "{$command}".toString()
 }
