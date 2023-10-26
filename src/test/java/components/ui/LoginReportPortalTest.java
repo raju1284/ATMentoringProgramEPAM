@@ -14,8 +14,8 @@ public class LoginReportPortalTest  extends BaseTest {
 
 
 
-    public void openTheReportUrl(LoginReportPortalPage loginReportPortalPage) throws IOException {
-
+    public void openTheReportUrl(WebDriver driver) throws IOException {
+        LoginReportPortalPage loginReportPortalPage = new LoginReportPortalPage(driver);
         loginReportPortalPage.navigateToUrl(fr.getPropertyValue("reportPortal"));
         Assert.assertEquals(loginReportPortalPage.getPageTitle(), "Report Portal");
 

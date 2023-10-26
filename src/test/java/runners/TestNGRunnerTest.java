@@ -12,21 +12,23 @@ import java.io.IOException;
 
 public class TestNGRunnerTest extends LoginReportPortalTest {
 
+    WebDriver driver;
     LoginReportPortalPage loginReportPortalPage;
 
     @BeforeTest
     public void driverSetup() throws IOException {
-        loginReportPortalPage = new LoginReportPortalPage(setUp());
+        this.driver = setUp();
     }
 
     @Test
     public void testOpenTheReportUrl() throws IOException {
 
-        openTheReportUrl(loginReportPortalPage);
+        openTheReportUrl(driver);
     }
 
     @AfterTest
     public void cleanUp(){
+        loginReportPortalPage = new LoginReportPortalPage(driver);
         loginReportPortalPage.driverClose();
     }
 

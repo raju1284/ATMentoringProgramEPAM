@@ -4,23 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Updated Basetest and testng runner file for refactoring">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ui/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ui/LoginReportPortalPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/components/ui/LoginReportPortalTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runners/TestNGRunnerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Incorporated the review comments">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/drivers/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JenkinsFile" beforeDir="false" afterPath="$PROJECT_DIR$/JenkinsFile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/ReadPropertyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/ReadPropertyFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/TestNGRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/DateUtilities.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/ExcelReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/ExcelWriter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/PageLoadWait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/PageLoadWait.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/readPropertyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/ReadPropertyFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/components/ui/LoginReportPortalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/ui/LoginReportPortalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/TestNGRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/TestNGRunnerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/configFiles/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configFiles/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +72,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/resources/reports",
+    "last_opened_file_path": "C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/resources/drivers",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -90,9 +81,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\test\resources\drivers" />
       <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\test\resources" />
       <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\main" />
-      <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\test\resources\drivers" />
       <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New" />
     </key>
   </component>
@@ -367,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698264009733</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Incorporated the review comments">
+      <created>1698299301698</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1698299301698</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -393,6 +391,18 @@
     <MESSAGE value="Updated TestNg runner" />
     <MESSAGE value="Updated TestNg runner to resolve nullpointer exception in Jenkins" />
     <MESSAGE value="Updated Basetest and testng runner file for refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Basetest and testng runner file for refactoring" />
+    <MESSAGE value="Incorporated the review comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Incorporated the review comments" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
