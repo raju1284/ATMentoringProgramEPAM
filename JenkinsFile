@@ -2,20 +2,18 @@ pipeline {
     agent any
 
     triggers{
-    githubPush()
+        githubPush()
     }
 
   stages{
-    stage('Checkout from github') {
-
-            steps {
+      stage('Checkout from github'){
+          steps {
                 checkout scm
-
-            }
-    }
-    stage ('Build Project')
-    {
-        steps{
+          }
+      }
+     stage ('Build Project')
+     {
+         steps{
              script{
                     runTheGradleBuildArtifactoryPlugin("clean build test -DskipTests=true --info -Dwebdriver.driver=edge")
              }

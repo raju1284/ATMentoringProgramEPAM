@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Updated TestNg runner to resolve nullpointer exception in Jenkins">
+    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Updated Basetest and testng runner file for refactoring">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ui/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ui/LoginReportPortalPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/components/ui/LoginReportPortalTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/runners/TestNGRunnerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JenkinsFile" beforeDir="false" afterPath="$PROJECT_DIR$/JenkinsFile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/TestNGRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/TestNGRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/TestNGRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/DateUtilities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/ExcelReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/ExcelWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/PageLoadWait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/PageLoadWait.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utilities/readPropertyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/ReadPropertyFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,20 +81,22 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/resources/drivers",
+    "last_opened_file_path": "C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/resources/reports",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\test\resources" />
+      <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\main" />
       <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\test\resources\drivers" />
       <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TestNGRunner.openTheReportUrl (1)">
+  <component name="RunManager" selected="TestNG.TestNGRunner">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="TAMP-Advanced.main" />
@@ -94,6 +109,29 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="TestNGRunner" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;runners.TestNGRunner&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="TestNGRunner.openTheReportUrl (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -118,9 +156,32 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="TestNGRunner" type="TestNG">
+      <module name="TAMP-Advanced.test" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="runners" />
+      <option name="MAIN_CLASS_NAME" value="runners.TestNGRunnerTest" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\test\resources\reports" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="Gradle.TestNGRunner" />
       <item itemvalue="Gradle.TestNGRunner.openTheReportUrl (1)" />
+      <item itemvalue="TestNG.TestNGRunner" />
     </list>
     <recent_temporary>
       <list>
@@ -299,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698259449867</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Updated Basetest and testng runner file for refactoring">
+      <created>1698264009733</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1698264009733</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -324,6 +392,7 @@
     <MESSAGE value="Updated Jenkins to include --info to add more logs in Jnekins" />
     <MESSAGE value="Updated TestNg runner" />
     <MESSAGE value="Updated TestNg runner to resolve nullpointer exception in Jenkins" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated TestNg runner to resolve nullpointer exception in Jenkins" />
+    <MESSAGE value="Updated Basetest and testng runner file for refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Basetest and testng runner file for refactoring" />
   </component>
 </project>

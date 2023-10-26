@@ -2,8 +2,11 @@ package utilities;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.time.Duration;
 
 public class PageLoadWait {
     private static final Logger logger = LoggerFactory.getLogger(PageLoadWait.class);
@@ -15,7 +18,7 @@ public class PageLoadWait {
             isPageLoadComplete = ((String) ((JavascriptExecutor) driver)
                     .executeScript("return document.readyState")).equalsIgnoreCase("Complete");
             logger.info("waiting for page to load");
-            Thread.sleep(1000);
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1000));
             waitTime++;
             if (waitTime > 250)
                 break;
@@ -26,13 +29,4 @@ public class PageLoadWait {
         }
     }
 
-        public static void waitABit(final long delayInMilliseconds)
-        {
-            try {
-                Thread.sleep(delayInMilliseconds);
-            } catch (InterruptedException e) {
-                logger.warn("wait a bit method was interrupted.", e);
-
-            }
-        }
 }
