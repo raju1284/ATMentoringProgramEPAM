@@ -22,7 +22,7 @@ public class BasePage {
     public BasePage(WebDriver driver)
     {
         this.driver = driver;
-        wait = new WebDriverWait(this.driver, Duration.ofSeconds(10));
+        this.wait = new WebDriverWait(this.driver, Duration.ofSeconds(10));
     }
     /// This method will perform the action of navigate to specific given url///
     public void navigateToUrl(String url)
