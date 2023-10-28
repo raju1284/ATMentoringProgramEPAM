@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
-
+///This class will provide the dynamic wait times  to perform the actions after page loaded completed///
 public class PageLoadWait {
     private static final Logger logger = LoggerFactory.getLogger(PageLoadWait.class);
 

@@ -1,35 +1,30 @@
 package com.ui;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.remote.CapabilityType;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import utilities.ReadPropertyFile;
 
-import java.io.IOException;
 import java.time.Duration;
 
 import static org.openqa.selenium.remote.CapabilityType.PROXY;
-
+///This class will provide the Base page common methods and initializing the Webdriver ///
 public class BasePage {
-    public static WebDriver driver;
+    protected WebDriver driver;
 
     private final static Logger logger = LoggerFactory.getLogger(BasePage.class);
-
+    private WebDriverWait wait;
+    ///Initializing the Web driver and wait time////
     public BasePage(WebDriver driver)
     {
         this.driver = driver;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
-
-
-
+    /// This method will perform the action of navigate to specific given url///
     public void navigateToUrl(String url)
     {
         driver.get(url);
@@ -41,24 +36,14 @@ public class BasePage {
         return driver.getTitle();
     }
 
-    public void driverClose()
-    {
-        driver.close();
-        logger.info("Webdriver Closed successfully");
-
-    }
+/// This method will perform the action of Webelements Click///
     public void doClick( String locator) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement elementToClick ;
-        elementToClick = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+        WebElement elementToClick = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
         elementToClick.click();
-
     }
-
+    /// This method will perform the action of sendkeys to a textbox Webelements///
     public void sendKeys(String locator, String text) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement elementToSendKeys ;
-        elementToSendKeys = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+        WebElement elementToSendKeys = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
         elementToSendKeys.sendKeys(text);
     }
 }

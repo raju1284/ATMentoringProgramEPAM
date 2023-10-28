@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Added Chrome driver">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ui/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ui/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ui/LoginReportPortalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ui/LoginReportPortalPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/PageLoadWait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/PageLoadWait.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/ReadPropertyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/ReadPropertyFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/drivers/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/drivers/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/components/ui/LoginReportPortalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/ui/LoginReportPortalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/TestNGRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/TestNGRunnerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -368,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698362405894</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added Chrome driver">
+      <created>1698365717604</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1698365717604</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -397,16 +409,5 @@
     <MESSAGE value="Incorporated the review comments" />
     <MESSAGE value="Added Chrome driver" />
     <option name="LAST_COMMIT_MESSAGE" value="Added Chrome driver" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

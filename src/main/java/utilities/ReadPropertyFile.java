@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Properties;
-
+///This class provide the methods to read the test data from Config.Properties file///
 public class ReadPropertyFile {
 
     public String getPropertyValue(String property) throws IOException
