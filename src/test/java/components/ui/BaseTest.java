@@ -11,6 +11,9 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import utilities.ReadPropertyFile;
 
@@ -22,10 +25,10 @@ import java.nio.file.Paths;
 ///This class provide the initialization of base set up methods like Weddriver setup before the test triggers///
 public class BaseTest  {
     ReadPropertyFile fr = new ReadPropertyFile();
-    protected WebDriver driver;
-    private final static Logger logger = LoggerFactory.getLogger(BasePage.class);
+       private final static Logger logger = LoggerFactory.getLogger(BasePage.class);
+    WebDriver driver;
 
-///This method will set up the driver and return it///
+    ///This method will set up the driver and return it///
     public WebDriver getDriver() throws IOException {
 
         String browser =  fr.getPropertyValue("browser");
@@ -51,13 +54,16 @@ public class BaseTest  {
     /// Close the Browser///
     public void driverClose()
     {
-        driver.close();
+        this.driver.close();
         logger.info("Webdriver Closed successfully");
 
     }
+    public void driverSetUp() throws IOException {
+        this.driver=getDriver();
+           }
+
+
+
 ///Initialize the Webdriver///
-    @BeforeTest
-    public void driverSetup() throws IOException {
-        this.driver = getDriver();
-    }
+
 }

@@ -10,7 +10,5 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class TestNGRunnerTest extends LoginReportPortalTest {
-
-
+public class TestNGRunnerTest  {
 }
