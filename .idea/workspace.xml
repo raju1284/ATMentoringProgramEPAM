@@ -4,24 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Clean up the code as per review comments mentioned in PR">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ui/WidgetPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestData/TestDataProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/components/ui/DashboardTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runners/JunitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runners/textng.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Module 4 code added for Test Runners,Data Drivern and Paralleization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ui/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ui/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ui/LoginReportPortalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ui/LoginReportPortalPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ui/WidgetPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ui/WidgetPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/components/ui/DashboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/ui/DashboardTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/components/ui/LoginReportPortalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/ui/LoginReportPortalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/TestNGRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/TestNGRunnerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/configFiles/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configFiles/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/textng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestNGXMLs/textng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,8 +89,11 @@
       <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\main" />
       <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\test\resources\TestNGXMLs" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.JunitTest">
+  <component name="RunManager" selected="TestNG.C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/resources/TestNGXMLs/textng.xml">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="TAMP-Advanced.main" />
@@ -203,6 +198,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/resources/TestNGXMLs/textng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TAMP-Advanced.test" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/TestNGXMLs/textng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestNGRunner" type="TestNG">
       <module name="TAMP-Advanced.test" />
       <shortenClasspath name="NONE" />
@@ -231,12 +236,14 @@
       <item itemvalue="Gradle.TestNGRunner.openTheReportUrl (1)" />
       <item itemvalue="JUnit.JunitTest" />
       <item itemvalue="TestNG.TestNGRunner" />
+      <item itemvalue="TestNG.C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/resources/TestNGXMLs/textng.xml" />
       <item itemvalue="TestNG.C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/java/runners/textng.xml" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/java/runners/textng.xml" />
+        <item itemvalue="TestNG.C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/resources/TestNGXMLs/textng.xml" />
         <item itemvalue="Gradle.LoginReportPortalTest" />
+        <item itemvalue="TestNG.C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/java/runners/textng.xml" />
         <item itemvalue="Gradle.TestNGRunner.openTheReportUrl (1)" />
         <item itemvalue="Application.Main" />
       </list>
@@ -475,7 +482,21 @@
       <option name="project" value="LOCAL" />
       <updated>1698471725792</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Module 4 code added for Test Runners,Data Drivern and Paralleization">
+      <created>1698976728814</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1698976728814</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Module 4 code added for Test Runners,Data Drivern and Paralleization">
+      <created>1698976744820</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1698976744820</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -504,39 +525,40 @@
     <MESSAGE value="Incorporated the review comments" />
     <MESSAGE value="Added Chrome driver" />
     <MESSAGE value="Clean up the code as per review comments mentioned in PR" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean up the code as per review comments mentioned in PR" />
+    <MESSAGE value="Module 4 code added for Test Runners,Data Drivern and Paralleization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Module 4 code added for Test Runners,Data Drivern and Paralleization" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/LoginReportPortalPage.java</url>
-          <line>52</line>
+          <line>51</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>44</line>
+          <line>45</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>45</line>
+          <line>46</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>46</line>
+          <line>47</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>48</line>
+          <line>49</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>47</line>
+          <line>48</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -556,37 +578,37 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/components/ui/DashboardTest.java</url>
-          <line>48</line>
+          <line>46</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/components/ui/DashboardTest.java</url>
-          <line>49</line>
+          <line>47</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>61</line>
+          <line>62</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>63</line>
+          <line>64</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>64</line>
+          <line>65</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>65</line>
+          <line>66</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>66</line>
+          <line>67</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

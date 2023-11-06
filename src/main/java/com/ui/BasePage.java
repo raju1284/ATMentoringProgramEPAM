@@ -31,20 +31,18 @@ public class BasePage {
     }
 
     public  void waitForElement( By locator) {
-        wait = new WebDriverWait(driver,Duration.ofSeconds(10000));
+        wait = new WebDriverWait(driver,Duration.ofSeconds(15));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     public  void waitForElementToBeInvisible( By locator,String text) {
-        wait = new WebDriverWait(driver,Duration.ofSeconds(10000));
+        wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
         wait.until(ExpectedConditions.invisibilityOfElementWithText(locator,text));
     }
 
-public void waitForABit(long seconds) throws InterruptedException {
-    wait(seconds);
-}
+
     /// This method will perform the action of navigate to specific given url///
     public void navigateToUrl(String url)
     {

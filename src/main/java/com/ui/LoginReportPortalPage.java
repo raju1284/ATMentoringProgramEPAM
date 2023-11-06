@@ -9,9 +9,6 @@ import java.io.IOException;
 import java.util.List;
 
 public class LoginReportPortalPage extends BasePage {
-    public LoginReportPortalPage(WebDriver driver) {
-        super(driver);
-    }
 
     ///Report portal Login Page Locators and respective page methods will be coded here///
     By userName= By.xpath("//input[@name='login']");
@@ -23,7 +20,9 @@ public class LoginReportPortalPage extends BasePage {
     By notificationList= By.xpath("//div[@class='notificationList__notification-list--UEF9s']/div");
 
 
-
+    public LoginReportPortalPage(WebDriver driver) {
+        super(driver);
+    }
 
     public void enterUserCredentials(String loginUser, String loginPassword) throws InterruptedException {
         sendKeys(userName,loginUser);

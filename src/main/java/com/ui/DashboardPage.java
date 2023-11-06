@@ -8,9 +8,6 @@ import java.time.Duration;
 import java.util.List;
 
 public class DashboardPage extends BasePage{
-    public DashboardPage(WebDriver driver) {
-        super(driver);
-    }
     By dashboardMenu=By.xpath("//i[@class='sidebarButton__btn-icon--xc3y6']");
     By dashboardAddNewButton=By.xpath("//span[text()='Add New Dashboard']");
     By dashboardName=By.xpath("//input[@placeholder='Enter dashboard name']");
@@ -24,10 +21,14 @@ public class DashboardPage extends BasePage{
 
     By projectList=By.xpath("//div[@class='projectSelector__project-selector--C4soz projectSelector__shown--Bgnqy']//a/span");
     By projectMenu=By.xpath("//div[@class='projectSelector__project-selector--C4soz projectSelector__shown--Bgnqy']");
-   By searchInput=By.xpath("//input[@class='inputSearch__input--yreVU type-text']");
-    public void addDashboard(String name, String description) throws InterruptedException {
+    By searchInput=By.xpath("//input[@class='inputSearch__input--yreVU type-text']");
+
+    public DashboardPage(WebDriver driver) {
+        super(driver);
+    }
+   public void addDashboard(String name, String description) throws InterruptedException {
         doClick(dashboardMenu);
-        Thread.sleep(5000);
+        driver.navigate().refresh();
         doClick(dashboardAddNewButton);
         sendKeys(dashboardName,name);
         sendKeys(dashboardDescription,description);

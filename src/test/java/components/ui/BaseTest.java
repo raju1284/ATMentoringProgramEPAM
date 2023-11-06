@@ -1,6 +1,9 @@
 package components.ui;
 
 import com.ui.BasePage;
+import com.ui.DashboardPage;
+import com.ui.LoginReportPortalPage;
+import com.ui.WidgetPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,7 +29,14 @@ import java.nio.file.Paths;
 public class BaseTest  {
     ReadPropertyFile fr = new ReadPropertyFile();
        private final static Logger logger = LoggerFactory.getLogger(BasePage.class);
-    WebDriver driver;
+    WebDriver driver = getDriver();;
+
+    LoginReportPortalPage loginReportPortalPage = new LoginReportPortalPage(driver);
+    DashboardPage dashboardPage = new DashboardPage(driver);
+    WidgetPage widgetPage = new WidgetPage(driver);
+
+    public BaseTest() throws IOException {
+    }
 
     ///This method will set up the driver and return it///
     public WebDriver getDriver() throws IOException {
@@ -58,9 +68,10 @@ public class BaseTest  {
         logger.info("Webdriver Closed successfully");
 
     }
-    public void driverSetUp() throws IOException {
-        this.driver=getDriver();
-           }
+//    @BeforeTest
+//    public void driverSetUp() throws IOException {
+//        this.driver=getDriver();
+//           }
 
 
 

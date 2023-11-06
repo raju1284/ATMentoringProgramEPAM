@@ -8,10 +8,6 @@ import java.util.List;
 
 public class WidgetPage extends  BasePage {
 
-
-    public WidgetPage(WebDriver driver) {
-        super(driver);
-    }
     By dashboardMenu=By.xpath("//i[@class='sidebarButton__btn-icon--xc3y6']");
     By clickAddWidgetButton= By.xpath("//button/span[text()='Add new widget']");
     By selectConfigRadio =By.xpath("//div/label/span/div");
@@ -22,6 +18,10 @@ public class WidgetPage extends  BasePage {
     By saveWidget=By.xpath("//button[text()='Add']");
     By notificationList= By.xpath("//div[@class='notificationList__notification-list--UEF9s']/div");
 
+
+    public WidgetPage(WebDriver driver) {
+        super(driver);
+    }
     public void addWidget(String widgetName, String widgetDes, String filterType) {
 
         doClick(clickAddWidgetButton);

@@ -16,11 +16,9 @@ import java.io.IOException;
 public class LoginReportPortalTest  extends BaseTest {
 
 
-    WebDriver driver = getDriver();
+
     TestDataProvider testData = new TestDataProvider();
     private final static Logger logger = LoggerFactory.getLogger(LoginReportPortalTest.class);
-    BasePage basePage = new BasePage(driver);
-    LoginReportPortalPage loginReportPortalPage;
 
     public LoginReportPortalTest() throws IOException {
     }
@@ -28,7 +26,7 @@ public class LoginReportPortalTest  extends BaseTest {
 
    @Test (dataProvider = "provideLoginTestData", priority = 1)
     public void testLogin(String userName ,String pwd) throws Exception {
-        loginReportPortalPage = new LoginReportPortalPage(driver);
+
         loginReportPortalPage.loginToReportPortal(fr.getPropertyValue("reportPortal"),userName,pwd);
         Assert.assertEquals(loginReportPortalPage.notificationMessage(),"Signed in successfully");
         loginReportPortalPage.logout();

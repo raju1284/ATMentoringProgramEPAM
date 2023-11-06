@@ -15,14 +15,12 @@ import java.io.IOException;
 
 public class DashboardTest extends BaseTest {
 
-    WebDriver driver = getDriver();
+
     TestDataProvider testData = new TestDataProvider();
     private final static Logger logger = LoggerFactory.getLogger(LoginReportPortalTest.class);
 
-    BasePage basePage = new BasePage(driver);
-    LoginReportPortalPage loginReportPortalPage = new LoginReportPortalPage(driver);
-    DashboardPage dashboardPage = new DashboardPage(driver);
-    WidgetPage widgetPage = new WidgetPage(driver);
+
+
 
     public DashboardTest() throws IOException {
     }
