@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+
+    triggers{
+        githubPush()
+    }
+
+  stages{
+      stage('Checkout from github'){
+          steps {
+                checkout scm
+          }
+      }
+     stage ('Build Project')
+     {
+         steps{
+             script{
+                    runTheGradleBuildArtifactoryPlugin("clean build test -DskipTests=true --info -Dwebdriver.driver=edge")
+             }
+         }
+    }
+  }
+}
+def runTheGradleBuildArtifactoryPlugin(String command){
+    println "running the artifactory plugin gradle build"
+    println "command: ${command}"
+    def rtGradle = Artifactory.newGradleBuild()
+    rtGradle.deployer.deployMavenDescriptors= true
+    rtGradle.deployer.deployIvyDescriptors= false
+    rtGradle.deployer.deployArtifacts= false
+    rtGradle.useWrapper=true
+  //  sh 'chmod +x gradlew'
+    rtGradle.run rootDir: ".", buildFile: 'build.gradle', switches: '-g .gradle ', tasks: "${command}".toString()
+}
