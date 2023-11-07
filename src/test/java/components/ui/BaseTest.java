@@ -26,10 +26,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 ///This class provide the initialization of base set up methods like Weddriver setup before the test triggers///
-public class BaseTest  {
+public class BaseTest {
     ReadPropertyFile fr = new ReadPropertyFile();
-       private final static Logger logger = LoggerFactory.getLogger(BasePage.class);
-    WebDriver driver = getDriver();;
+    private final static Logger logger = LoggerFactory.getLogger(BasePage.class);
+    WebDriver driver = getDriver();
+    ;
 
     LoginReportPortalPage loginReportPortalPage = new LoginReportPortalPage(driver);
     DashboardPage dashboardPage = new DashboardPage(driver);
@@ -40,41 +41,27 @@ public class BaseTest  {
 
     ///This method will set up the driver and return it///
     public WebDriver getDriver() throws IOException {
-
-        String browser =  fr.getPropertyValue("browser");
-
-        Path resourceDirectory = Paths.get("src","test","resources");
+        String browser = fr.getPropertyValue("browser");
+        Path resourceDirectory = Paths.get("src", "test", "resources");
         String absolutePath = resourceDirectory.toFile().getAbsolutePath();
-
-        if(browser.equalsIgnoreCase("chrome")) {
-            String[] pathNames = {absolutePath, "\\drivers\\chromedriver.exe" };
+        if (browser.equalsIgnoreCase("chrome")) {
+            String[] pathNames = {absolutePath, "\\drivers\\chromedriver.exe"};
             String path = String.join(File.pathSeparator, pathNames);
             System.out.println(path);
-            System.setProperty("webdriver.chrome.driver",path.replaceAll(";",""));
+            System.setProperty("webdriver.chrome.driver", path.replaceAll(";", ""));
             ChromeOptions options = new ChromeOptions();
             options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
             options.addArguments("--remote-allow-origins=*");
             options.setCapability("ignore-certificate-errors", true);
-
-
             driver = new ChromeDriver(options);
         }
         return driver;
     }
+
     /// Close the Browser///
-    public void driverClose()
-    {
+    public void driverClose() {
         this.driver.close();
         logger.info("Webdriver Closed successfully");
 
     }
-//    @BeforeTest
-//    public void driverSetUp() throws IOException {
-//        this.driver=getDriver();
-//           }
-
-
-
-///Initialize the Webdriver///
-
 }

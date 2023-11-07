@@ -14,55 +14,50 @@ import org.testng.annotations.*;
 import java.io.IOException;
 
 public class DashboardTest extends BaseTest {
-
-
     TestDataProvider testData = new TestDataProvider();
     private final static Logger logger = LoggerFactory.getLogger(LoginReportPortalTest.class);
-
-
-
 
     public DashboardTest() throws IOException {
     }
 
-@BeforeTest()
+    @BeforeTest()
     public void loginReportPortal() throws Exception {
-         loginReportPortalPage.loginToReportPortal(fr.getPropertyValue("reportPortal"), fr.getPropertyValue("username1"),fr.getPropertyValue("password1") );
-    Assert.assertEquals(loginReportPortalPage.notificationMessage(),"Signed in successfully");
-    }
-    @Test(dataProvider = "provideAddDashboardData",priority = 1)
-    public void addDashboard(String dashName,String dashDes) throws Exception {
-       dashboardPage.addDashboard(dashName,dashDes);
-       Assert.assertEquals(loginReportPortalPage.notificationMessage(),"Dashboard has been added");
+        loginReportPortalPage.loginToReportPortal(fr.getPropertyValue("reportPortal"), fr.getPropertyValue("username1"), fr.getPropertyValue("password1"));
+        Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Signed in successfully");
     }
 
-   @Test(dataProvider = "provideAddDashboardData",priority = 3)
-    public void deleteDashboard(String dashName,String dashDes) throws Exception {
+    @Test(dataProvider = "provideAddDashboardData", priority = 1)
+    public void addDashboard(String dashName, String dashDes) throws Exception {
+        dashboardPage.addDashboard(dashName, dashDes);
+        Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Dashboard has been added");
+    }
+
+    @Test(dataProvider = "provideAddDashboardData", priority = 3)
+    public void deleteDashboard(String dashName, String dashDes) throws Exception {
         dashboardPage.deleteDashboard(dashName);
-       Assert.assertEquals(loginReportPortalPage.notificationMessage(),"Dashboard has been deleted");
+        Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Dashboard has been deleted");
     }
 
-    @Test(dataProvider = "provideWidgetData",priority = 2)
-    public void addWidget(String widgetName,String widgetDes, String filter) throws Exception {
+    @Test(dataProvider = "provideWidgetData", priority = 2)
+    public void addWidget(String widgetName, String widgetDes, String filter) throws Exception {
         dashboardPage.editDashboard(fr.getPropertyValue("DashboardName1"));
-        widgetPage.addWidget(widgetName,widgetDes,filter);
-        Assert.assertEquals(loginReportPortalPage.notificationMessage(),"Widget has been added");
+        widgetPage.addWidget(widgetName, widgetDes, filter);
+        Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Widget has been added");
     }
-    @DataProvider(name ="provideAddDashboardData")
-    public  Object [][] addDashboardTestData() throws IOException {
+
+    @DataProvider(name = "provideAddDashboardData")
+    public Object[][] addDashboardTestData() throws IOException {
         return testData.addDashboardTestData();
     }
 
-    @DataProvider(name ="provideWidgetData")
-    public  Object [][] addWidgetTestData() throws IOException {
+    @DataProvider(name = "provideWidgetData")
+    public Object[][] addWidgetTestData() throws IOException {
         return testData.addWidgetTestData();
     }
 
-
-    @Test(priority=4)
+    @Test(priority = 4)
     public void cleanUp() throws Exception {
         loginReportPortalPage.logout();
-         driverClose();
+        driverClose();
     }
-
 }
