@@ -24,6 +24,7 @@ public class LoginReportPortalPage extends BasePage {
     }
 
     public void enterUserCredentials(String loginUser, String loginPassword) throws InterruptedException {
+
         sendKeys(userName, loginUser);
         sendKeys(password, loginPassword);
     }
@@ -39,8 +40,10 @@ public class LoginReportPortalPage extends BasePage {
         clickLoginButton();
     }
 
-    public void logout() throws Exception {
+    public void logout() throws Exception
+    {
         doClick(userProfile);
+        waitForElement(userProfileElements);
         List<WebElement> profileWebElements = driver.findElements(userProfileElements);
         for (int i = 0; i < profileWebElements.size(); i++) {
             if (profileWebElements.get(i).getText().equalsIgnoreCase("Logout")) {

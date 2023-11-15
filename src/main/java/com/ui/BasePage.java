@@ -30,7 +30,7 @@ public class BasePage {
     }
 
     public void waitForElement(By locator) {
-        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 

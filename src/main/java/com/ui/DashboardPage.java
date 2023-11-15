@@ -19,8 +19,8 @@ public class DashboardPage extends BasePage {
     By deleteList = By.xpath("//div[@class='gridRow__grid-row--X9wIq']//div[@class='dashboardTable__icon-holder--zZvuZ']/i");
     By deleteButton = By.xpath("//div/button[text()='Delete']");
 
-    By projectList = By.xpath("//div[@class='projectSelector__project-selector--C4soz projectSelector__shown--Bgnqy']//a/span");
-    By projectMenu = By.xpath("//div[@class='projectSelector__project-selector--C4soz projectSelector__shown--Bgnqy']");
+    By projectList = By.xpath("//div[@class='projectSelector__projects-list--EKkEN']//a/span");
+    By projectMenu = By.xpath("//div[@class='projectSelector__project-selector--C4soz']");
     By searchInput = By.xpath("//input[@class='inputSearch__input--yreVU type-text']");
 
     public DashboardPage(WebDriver driver) {
@@ -29,6 +29,7 @@ public class DashboardPage extends BasePage {
 
     public void addDashboard(String name, String description) throws InterruptedException {
         doClick(dashboardMenu);
+        selectProject("RAJU1284_PERSONAL");
         driver.navigate().refresh();
         doClick(dashboardAddNewButton);
         sendKeys(dashboardName, name);
@@ -37,8 +38,10 @@ public class DashboardPage extends BasePage {
         doClick(notificationList);
     }
 
-    public void deleteDashboard(String dashName) throws InterruptedException {
+    public void deleteDashboard(String dashName)  {
         doClick(dashboardMenu);
+        selectProject("raju1284_personal");
+        waitForElement(deleteList);
         List<WebElement> delList = getLsitsOfElements(deleteList);
         List<WebElement> dashNameList = getLsitsOfElements(deleteDashboardNameList);
         for (int i = 0; i < delList.size(); i++) {

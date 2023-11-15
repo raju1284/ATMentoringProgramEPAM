@@ -5,6 +5,9 @@ import com.ui.BasePage;
 import com.ui.DashboardPage;
 import com.ui.LoginReportPortalPage;
 import com.ui.WidgetPage;
+import io.cucumber.java.AfterAll;
+
+import io.cucumber.java.BeforeAll;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +24,7 @@ public class DashboardTest extends BaseTest {
     }
 
     @BeforeTest()
-    public void loginReportPortal() throws Exception {
+       public void loginReportPortal() throws Exception {
         loginReportPortalPage.loginToReportPortal(fr.getPropertyValue("reportPortal"), fr.getPropertyValue("username1"), fr.getPropertyValue("password1"));
         Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Signed in successfully");
     }
@@ -56,6 +59,7 @@ public class DashboardTest extends BaseTest {
     }
 
     @Test(priority = 4)
+    @AfterAll
     public void cleanUp() throws Exception {
         loginReportPortalPage.logout();
         driverClose();
