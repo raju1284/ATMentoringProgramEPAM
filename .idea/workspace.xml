@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Module 5 review comments fixed">
-      <change beforePath="$PROJECT_DIR$/src/test/resources/TestNGXMLs/textng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestNGXMLs/textng.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Module 5 review comments fixed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -543,7 +541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700165357104</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Module 5 review comments fixed">
+      <created>1700165489933</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1700165489933</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

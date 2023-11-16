@@ -86,9 +86,9 @@ public class DashboardPage extends BasePage {
     }
 
     public boolean dashboardDeleted(String dashName) {
-        String projectName = "raju1284_personal";
+
         doClick(dashboardMenu);
-        selectProject(projectName);
+        selectProject(getProjectName());
         waitForElement(deleteDashboardNameList);
         List<WebElement> dashNameList = getLsitsOfElements(deleteDashboardNameList);
         for (int j = 0; j < dashNameList.size(); j++) {
@@ -111,7 +111,6 @@ public class DashboardPage extends BasePage {
         Actions actions = new Actions(driver);
         actions.moveToElement(element).perform();
         String hoverText = element.getAttribute("title");
-        System.out.println(hoverText);
         return hoverText + "_personal";
 
 
