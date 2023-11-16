@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Module 5 review comments fixed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinition/DashboardTestSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/DashboardTestSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinition/LoginTestSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/LoginTestSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/components/ui/DashboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/ui/DashboardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/JunitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/JunitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/DashboardTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/DashboardTest.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/LoginTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/LoginTest.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/TestNGXMLs/textng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestNGXMLs/textng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -543,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700107186413</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Module 5 review comments fixed">
+      <created>1700165357104</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1700165357104</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -636,11 +636,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
           <line>50</line>
           <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/runners/LoginTestRunner.java</url>
-          <line>4</line>
-          <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
