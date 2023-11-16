@@ -28,23 +28,19 @@ public class DashboardTestSteps {
         widgetPage = testContext.getPageObjectManager().getWidgetPage();
     }
 
-    @Given("User login the report portal")
-    public void userLogin() throws Exception {
-        loginReportPortalPage.loginToReportPortal(fr.getPropertyValue("reportPortal"), fr.getPropertyValue("username1"), fr.getPropertyValue("password1"));
-    }
-
     @When("User creates the dashboard with  given dashboard name {string} and description {string}")
     public void userEntersTheDashboardDetails(String dashname, String dashdesc) throws Exception {
-        dashboardPage.addDashboard(dashname, dashdesc);
+        String projectName = dashboardPage.getProjectName();
+        dashboardPage.addDashboard(dashname, dashdesc, projectName);
     }
 
     @Then("Verify the dashboard {string} added successfully")
-    public void validateTheDashboardAdded( String dashName) {
+    public void validateTheDashboardAdded(String dashName) {
         Assert.assertTrue(dashboardPage.getDashboardTitle().equalsIgnoreCase(dashName));
 
     }
 
-    @When("User adds the widget to the dashboard with {string} {string} {string} {string}")
+    @When("User adds the widget to the dashboard with name: {string} widgetName: {string} widgetDesc: {string} and filter: {string}")
     public void addTheWidgetToDashboard(String DashName, String widgetName, String desc, String filter) {
         dashboardPage.editDashboard(DashName);
         widgetPage.addWidget(widgetName, desc, filter);
@@ -57,7 +53,8 @@ public class DashboardTestSteps {
 
     @When("User deletes the dashboard {string}")
     public void deleteTheDashboard(String dashName) {
-        dashboardPage.deleteDashboard(dashName);
+        String projectName = dashboardPage.getProjectName();
+        dashboardPage.deleteDashboard(dashName, projectName);
     }
 
     @Then("Verify the dashboard {string} deleted successfully")

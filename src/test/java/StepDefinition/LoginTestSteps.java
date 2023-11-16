@@ -21,19 +21,15 @@ public class LoginTestSteps {
         loginReportPortalPage = testContext.getPageObjectManager().getLoginReportPortalPage();
     }
 
-    @Given("User open the report portal URL")
-    public void userOpensTheReportPortal() throws IOException {
-        loginReportPortalPage.navigateToUrl(fr.getPropertyValue("reportPortal"));
-    }
-
-    @When("User login the report portal with valid username {string} and password {string}")
+    @Given("User login the report portal with valid username {string} and password {string}")
     public void userLoginWithValidCredentials(String username, String password) throws Exception {
+        loginReportPortalPage.navigateToUrl(fr.getPropertyValue("reportPortal"));
         loginReportPortalPage.enterUserCredentials(username, password);
+        loginReportPortalPage.clickLoginButton();
     }
 
     @Then("Verify that user was logged in successful")
     public void validateTheLoginFunctionality() throws Exception {
-        loginReportPortalPage.clickLoginButton();
         Assert.assertTrue(loginReportPortalPage.allDashboardsText().equalsIgnoreCase("All Dashboards"));
     }
 

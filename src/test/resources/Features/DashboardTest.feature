@@ -1,12 +1,12 @@
 Feature: Dashboard Test Feature
 
   Background: User is logged In
-    Given User login the report portal
+    Given User login the report portal with valid username "raju1284" and password "Devraj@1284"
    @Test1
   Scenario Outline: Add Dashboard to the report portal
     When User creates the dashboard with  given dashboard name "<dashboardName>" and description "<dashboardDesc>"
     Then Verify the dashboard "<dashboardName>" added successfully
-    When User adds the widget to the dashboard with "<dashboardName>" "<widgetName>" "<widgetDesc>" "<filter>"
+    When User adds the widget to the dashboard with name: "<dashboardName>" widgetName: "<widgetName>" widgetDesc: "<widgetDesc>" and filter: "<filter>"
     Then Verify the widget "<widgetName>" added to the dashboard successfully
 
     Examples:

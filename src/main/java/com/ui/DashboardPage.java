@@ -3,6 +3,7 @@ package com.ui;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 import java.util.List;
@@ -22,15 +23,17 @@ public class DashboardPage extends BasePage {
     By projectList = By.xpath("//div[@class='projectSelector__projects-list--EKkEN']//a/span");
     By projectMenu = By.xpath("//div[@class='projectSelector__project-selector--C4soz']");
     By searchInput = By.xpath("//input[@class='inputSearch__input--yreVU type-text']");
-    By dashTitleElement=By.xpath("//li/span");
+    By dashTitleElement = By.xpath("//li/span");
+    By currentUser = By.xpath("//div[@class='userBlock__username--xTuSF']");
+    By userProfile = By.xpath("//div[@class='userBlock__user-block--Hrr33']");
 
     public DashboardPage(WebDriver driver) {
         super(driver);
     }
 
-    public void addDashboard(String name, String description) throws InterruptedException {
+    public void addDashboard(String name, String description, String projectName) throws InterruptedException {
         doClick(dashboardMenu);
-        selectProject("RAJU1284_PERSONAL");
+        selectProject(projectName);
         driver.navigate().refresh();
         doClick(dashboardAddNewButton);
         sendKeys(dashboardName, name);
@@ -39,8 +42,7 @@ public class DashboardPage extends BasePage {
         doClick(notificationList);
     }
 
-    public void deleteDashboard(String dashName)  {
-        String projectName="raju1284_personal";
+    public void deleteDashboard(String dashName, String projectName) {
         doClick(dashboardMenu);
         selectProject(projectName);
         waitForElement(deleteList);
@@ -82,21 +84,19 @@ public class DashboardPage extends BasePage {
         }
 
     }
-    public boolean dashboardDeleted(String dashName)
-    {
-        String projectName="raju1284_personal";
+
+    public boolean dashboardDeleted(String dashName) {
+        String projectName = "raju1284_personal";
         doClick(dashboardMenu);
         selectProject(projectName);
         waitForElement(deleteDashboardNameList);
-
         List<WebElement> dashNameList = getLsitsOfElements(deleteDashboardNameList);
-
-            for (int j = 0; j < dashNameList.size(); j++) {
-                if (dashNameList.get(j).getText().equalsIgnoreCase(dashName)) {
-                    return false;
-                }
+        for (int j = 0; j < dashNameList.size(); j++) {
+            if (dashNameList.get(j).getText().equalsIgnoreCase(dashName)) {
+                return false;
             }
-            return true;
+        }
+        return true;
     }
 
 
@@ -105,4 +105,20 @@ public class DashboardPage extends BasePage {
         return getElementText(dashTitleElement);
     }
 
+    public String getProjectName() {
+        doClick(userProfile);
+        WebElement element = driver.findElement(currentUser);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).perform();
+        String hoverText = element.getAttribute("title");
+        System.out.println(hoverText);
+        return hoverText + "_personal";
+
+
+    }
+
+
+    public By getDashboardAddNewButton() {
+        return dashboardAddNewButton;
+    }
 }

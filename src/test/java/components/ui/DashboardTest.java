@@ -31,13 +31,13 @@ public class DashboardTest extends BaseTest {
 
     @Test(dataProvider = "provideAddDashboardData", priority = 1)
     public void addDashboard(String dashName, String dashDes) throws Exception {
-        dashboardPage.addDashboard(dashName, dashDes);
+        dashboardPage.addDashboard(dashName, dashDes,dashboardPage.getProjectName());
         Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Dashboard has been added");
     }
 
     @Test(dataProvider = "provideAddDashboardData", priority = 3)
     public void deleteDashboard(String dashName, String dashDes) throws Exception {
-        dashboardPage.deleteDashboard(dashName);
+        dashboardPage.deleteDashboard(dashName,dashboardPage.getProjectName());
         Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Dashboard has been deleted");
     }
 

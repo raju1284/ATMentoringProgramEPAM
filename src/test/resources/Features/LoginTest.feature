@@ -1,7 +1,6 @@
 Feature: Login Test Feature
   Scenario Outline: Validate the login functionality for the report portal
-    Given User open the report portal URL
-    When User login the report portal with valid username "<username>" and password "<password>"
+    Given User login the report portal with valid username "<username>" and password "<password>"
     Then Verify that user was logged in successful
 
     Examples:
