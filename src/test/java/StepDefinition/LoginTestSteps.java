@@ -26,15 +26,15 @@ public class LoginTestSteps {
         loginReportPortalPage.navigateToUrl(fr.getPropertyValue("reportPortal"));
     }
 
-    @When("User login the report portal with valid {string} and {string}")
+    @When("User login the report portal with valid username {string} and password {string}")
     public void userLoginWithValidCredentials(String username, String password) throws Exception {
         loginReportPortalPage.enterUserCredentials(username, password);
     }
 
-    @Then("Validate the Login should be successful")
+    @Then("Verify that user was logged in successful")
     public void validateTheLoginFunctionality() throws Exception {
         loginReportPortalPage.clickLoginButton();
-        Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Signed in successfully");
+        Assert.assertTrue(loginReportPortalPage.allDashboardsText().equalsIgnoreCase("All Dashboards"));
     }
 
 }

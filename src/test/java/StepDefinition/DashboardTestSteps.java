@@ -33,26 +33,26 @@ public class DashboardTestSteps {
         loginReportPortalPage.loginToReportPortal(fr.getPropertyValue("reportPortal"), fr.getPropertyValue("username1"), fr.getPropertyValue("password1"));
     }
 
-    @When("User clicks add dashboard button and enter the dashboard details {string} {string}")
+    @When("User creates the dashboard with  given dashboard name {string} and description {string}")
     public void userEntersTheDashboardDetails(String dashname, String dashdesc) throws Exception {
         dashboardPage.addDashboard(dashname, dashdesc);
     }
 
-    @Then("User should be able to add dashboard successfully")
-    public void validateTheDashboardAdded() {
-        Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Dashboard has been added");
+    @Then("Verify the dashboard {string} added successfully")
+    public void validateTheDashboardAdded( String dashName) {
+        Assert.assertTrue(dashboardPage.getDashboardTitle().equalsIgnoreCase(dashName));
 
     }
 
-    @When("User clicks edit dashboard button and add the widget details {string} {string} {string} {string}")
+    @When("User adds the widget to the dashboard with {string} {string} {string} {string}")
     public void addTheWidgetToDashboard(String DashName, String widgetName, String desc, String filter) {
         dashboardPage.editDashboard(DashName);
         widgetPage.addWidget(widgetName, desc, filter);
     }
 
-    @Then("User should be able to add widget to the dashboard successfully")
-    public void validateTheWidgetAdded() {
-        Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Widget has been added");
+    @Then("Verify the widget {string} added to the dashboard successfully")
+    public void validateTheWidgetAdded(String widgetName) {
+        Assert.assertTrue(widgetPage.getWidgetTitle().contains(widgetName));
     }
 
     @When("User deletes the dashboard {string}")
@@ -60,9 +60,9 @@ public class DashboardTestSteps {
         dashboardPage.deleteDashboard(dashName);
     }
 
-    @Then("User should be able to delete  the dashboard successfully")
-    public void validateDashboardDeleted() {
-        Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Dashboard has been deleted");
+    @Then("Verify the dashboard {string} deleted successfully")
+    public void validateDashboardDeleted(String dashName) {
+        Assert.assertTrue(dashboardPage.dashboardDeleted(dashName));
     }
 }
 

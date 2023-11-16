@@ -17,8 +17,11 @@ public class LoginReportPortalPage extends BasePage {
     By loginWithEPAM = By.xpath("//button/span ");
     By userProfile = By.xpath("//div[@class='userBlock__user-block--Hrr33']");
     By userProfileElements = By.xpath("//div[@class='userBlock__menu--FHvby']/div");
+
+    By welcomeText= By.xpath("//span[text()='Welcome,']");
     By notificationList = By.xpath("//div[@class='notificationList__notification-list--UEF9s']/div");
 
+    By allDashboardsElement =By.xpath("//span[text()='All Dashboards']");
     public LoginReportPortalPage(WebDriver driver) {
         super(driver);
     }
@@ -53,7 +56,13 @@ public class LoginReportPortalPage extends BasePage {
         }
     }
 
-    public String notificationMessage() {
+    public String notificationMessage()
+    {
         return getElementText(notificationList);
+    }
+
+    public String allDashboardsText()
+    {
+        return getElementText(allDashboardsElement);
     }
 }

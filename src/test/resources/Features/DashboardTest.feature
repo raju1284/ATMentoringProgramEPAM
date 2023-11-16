@@ -4,10 +4,10 @@ Feature: Dashboard Test Feature
     Given User login the report portal
    @Test1
   Scenario Outline: Add Dashboard to the report portal
-    When User clicks add dashboard button and enter the dashboard details "<dashboardName>" "<dashboardDesc>"
-    Then User should be able to add dashboard successfully
-    When User clicks edit dashboard button and add the widget details "<dashboardName>" "<widgetName>" "<widgetDesc>" "<filter>"
-    Then User should be able to add widget to the dashboard successfully
+    When User creates the dashboard with  given dashboard name "<dashboardName>" and description "<dashboardDesc>"
+    Then Verify the dashboard "<dashboardName>" added successfully
+    When User adds the widget to the dashboard with "<dashboardName>" "<widgetName>" "<widgetDesc>" "<filter>"
+    Then Verify the widget "<widgetName>" added to the dashboard successfully
 
     Examples:
       |dashboardName |dashboardDesc   |widgetName |widgetDesc   |filter|
@@ -17,7 +17,7 @@ Feature: Dashboard Test Feature
   @Test2
   Scenario Outline: Delete the Dashboard
     When User deletes the dashboard "<dashName>"
-    Then User should be able to delete  the dashboard successfully
+    Then Verify the dashboard "<dashName>" deleted successfully
 
     Examples:
       |dashName|

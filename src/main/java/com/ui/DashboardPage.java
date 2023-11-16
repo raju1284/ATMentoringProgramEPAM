@@ -22,6 +22,7 @@ public class DashboardPage extends BasePage {
     By projectList = By.xpath("//div[@class='projectSelector__projects-list--EKkEN']//a/span");
     By projectMenu = By.xpath("//div[@class='projectSelector__project-selector--C4soz']");
     By searchInput = By.xpath("//input[@class='inputSearch__input--yreVU type-text']");
+    By dashTitleElement=By.xpath("//li/span");
 
     public DashboardPage(WebDriver driver) {
         super(driver);
@@ -39,8 +40,9 @@ public class DashboardPage extends BasePage {
     }
 
     public void deleteDashboard(String dashName)  {
+        String projectName="raju1284_personal";
         doClick(dashboardMenu);
-        selectProject("raju1284_personal");
+        selectProject(projectName);
         waitForElement(deleteList);
         List<WebElement> delList = getLsitsOfElements(deleteList);
         List<WebElement> dashNameList = getLsitsOfElements(deleteDashboardNameList);
@@ -79,6 +81,28 @@ public class DashboardPage extends BasePage {
             }
         }
 
+    }
+    public boolean dashboardDeleted(String dashName)
+    {
+        String projectName="raju1284_personal";
+        doClick(dashboardMenu);
+        selectProject(projectName);
+        waitForElement(deleteDashboardNameList);
+
+        List<WebElement> dashNameList = getLsitsOfElements(deleteDashboardNameList);
+
+            for (int j = 0; j < dashNameList.size(); j++) {
+                if (dashNameList.get(j).getText().equalsIgnoreCase(dashName)) {
+                    return false;
+                }
+            }
+            return true;
+    }
+
+
+    public String getDashboardTitle() {
+        waitForElement(dashTitleElement);
+        return getElementText(dashTitleElement);
     }
 
 }
