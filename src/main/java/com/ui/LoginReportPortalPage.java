@@ -17,13 +17,17 @@ public class LoginReportPortalPage extends BasePage {
     By loginWithEPAM = By.xpath("//button/span ");
     By userProfile = By.xpath("//div[@class='userBlock__user-block--Hrr33']");
     By userProfileElements = By.xpath("//div[@class='userBlock__menu--FHvby']/div");
+
+    By welcomeText= By.xpath("//span[text()='Welcome,']");
     By notificationList = By.xpath("//div[@class='notificationList__notification-list--UEF9s']/div");
 
+    By allDashboardsElement =By.xpath("//span[text()='All Dashboards']");
     public LoginReportPortalPage(WebDriver driver) {
         super(driver);
     }
 
     public void enterUserCredentials(String loginUser, String loginPassword) throws InterruptedException {
+
         sendKeys(userName, loginUser);
         sendKeys(password, loginPassword);
     }
@@ -39,8 +43,10 @@ public class LoginReportPortalPage extends BasePage {
         clickLoginButton();
     }
 
-    public void logout() throws Exception {
+    public void logout() throws Exception
+    {
         doClick(userProfile);
+        waitForElement(userProfileElements);
         List<WebElement> profileWebElements = driver.findElements(userProfileElements);
         for (int i = 0; i < profileWebElements.size(); i++) {
             if (profileWebElements.get(i).getText().equalsIgnoreCase("Logout")) {
@@ -50,7 +56,13 @@ public class LoginReportPortalPage extends BasePage {
         }
     }
 
-    public String notificationMessage() {
+    public String notificationMessage()
+    {
         return getElementText(notificationList);
+    }
+
+    public String allDashboardsText()
+    {
+        return getElementText(allDashboardsElement);
     }
 }

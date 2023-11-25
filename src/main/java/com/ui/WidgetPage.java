@@ -17,6 +17,7 @@ public class WidgetPage extends BasePage {
     By saveWidget = By.xpath("//button[text()='Add']");
     By notificationList = By.xpath("//div[@class='notificationList__notification-list--UEF9s']/div");
 
+    By widgetTitle =By.xpath("//div[@class='widgetHeader__widget-name-block--AOAHS']");
     public WidgetPage(WebDriver driver) {
         super(driver);
     }
@@ -40,7 +41,12 @@ public class WidgetPage extends BasePage {
         sendKeys(enterWidgetDes, widgetDes);
         doClick(saveWidget);
         doClick(notificationList);
-        doClick(dashboardMenu);
+
     }
 
+    public String getWidgetTitle(){
+        waitForElement(widgetTitle);
+        return getElementText(widgetTitle);
+
+    }
 }

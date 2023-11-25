@@ -58,12 +58,12 @@ public class JunitTest extends BaseTest {
     public void addDashboard() throws Exception {
         loginReportPortalPage.loginToReportPortal(fr.getPropertyValue("reportPortal"), fr.getPropertyValue("username1"), fr.getPropertyValue("password1"));
         Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Signed in successfully");
-        dashboardPage.addDashboard(dashboardName, dashboardDes);
+        dashboardPage.addDashboard(dashboardName, dashboardDes,dashboardPage.getProjectName());
         Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Dashboard has been added");
         dashboardPage.editDashboard(dashboardName);
         widgetPage.addWidget(widgetName, widgetDescription, filterCriteria);
         Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Widget has been added");
-        dashboardPage.deleteDashboard(dashboardName);
+        dashboardPage.deleteDashboard(dashboardName,dashboardPage.getProjectName());
         Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Dashboard has been deleted");
         loginReportPortalPage.logout();
         driverClose();

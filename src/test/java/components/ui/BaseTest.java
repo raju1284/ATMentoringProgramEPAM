@@ -4,6 +4,7 @@ import com.ui.BasePage;
 import com.ui.DashboardPage;
 import com.ui.LoginReportPortalPage;
 import com.ui.WidgetPage;
+import io.cucumber.java.After;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,14 +28,13 @@ import java.nio.file.Paths;
 
 ///This class provide the initialization of base set up methods like Weddriver setup before the test triggers///
 public class BaseTest {
-    ReadPropertyFile fr = new ReadPropertyFile();
+    public ReadPropertyFile fr = new ReadPropertyFile();
     private final static Logger logger = LoggerFactory.getLogger(BasePage.class);
-    WebDriver driver = getDriver();
-    ;
+    protected WebDriver driver = getDriver();
 
-    LoginReportPortalPage loginReportPortalPage = new LoginReportPortalPage(driver);
-    DashboardPage dashboardPage = new DashboardPage(driver);
-    WidgetPage widgetPage = new WidgetPage(driver);
+    public LoginReportPortalPage loginReportPortalPage = new LoginReportPortalPage(driver);
+    public DashboardPage dashboardPage = new DashboardPage(driver);
+    public WidgetPage widgetPage = new WidgetPage(driver);
 
     public BaseTest() throws IOException {
     }

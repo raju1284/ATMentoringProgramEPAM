@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="pull 2 request review comments incorporated">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ui/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ui/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ui/LoginReportPortalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ui/LoginReportPortalPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ui/WidgetPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ui/WidgetPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/PageLoadWait.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/PageLoadWait.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/ReadPropertyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/ReadPropertyFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestData/TestDataProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestData/TestDataProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/components/ui/DashboardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/ui/DashboardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/components/ui/LoginReportPortalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/ui/LoginReportPortalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/JunitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/JunitTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Module 5 review comments fixed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,18 +38,25 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="module-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="module4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -78,6 +72,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/resources/drivers&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
@@ -96,20 +91,7 @@
       <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\test\resources\TestNGXMLs" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/resources/TestNGXMLs/textng.xml">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="TAMP-Advanced.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.TestNGRunner">
     <configuration name="GradleRun" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -156,6 +138,31 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="LoginTestRunner" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+            <option value="build" />
+            <option value="test" />
+            <option value="--tests" />
+            <option value="&quot;runners.LoginTestRunner&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="TestNGRunner.openTheReportUrl (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -184,7 +191,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="PACKAGE_NAME" value="runners" />
-      <option name="MAIN_CLASS_NAME" value="runners.JunitTest" />
+      <option name="MAIN_CLASS_NAME" value="runners.DashboardTestRunner" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
@@ -216,8 +223,8 @@
       <shortenClasspath name="NONE" />
       <useClassPathOnly />
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="components.ui" />
-      <option name="MAIN_CLASS_NAME" value="components.ui.LoginReportPortalTest" />
+      <option name="PACKAGE_NAME" value="runners" />
+      <option name="MAIN_CLASS_NAME" value="runners.CucumberTestRunner" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
@@ -233,8 +240,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Gradle.GradleRun" />
+      <item itemvalue="Gradle.LoginTestRunner" />
       <item itemvalue="Gradle.LoginReportPortalTest" />
       <item itemvalue="Gradle.TestNGRunner.openTheReportUrl (1)" />
       <item itemvalue="JUnit.JunitTest" />
@@ -245,10 +252,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/resources/TestNGXMLs/textng.xml" />
+        <item itemvalue="Gradle.LoginTestRunner" />
         <item itemvalue="Gradle.LoginReportPortalTest" />
         <item itemvalue="TestNG.C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/java/runners/textng.xml" />
         <item itemvalue="Gradle.TestNGRunner.openTheReportUrl (1)" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -506,7 +513,42 @@
       <option name="project" value="LOCAL" />
       <updated>1699299734460</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Code Formatting comments incorporated">
+      <created>1699372631441</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1699372631441</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Module 5 Home tasks implemented">
+      <created>1700083126887</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1700083126887</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Module 5 review comments fixed">
+      <created>1700107186413</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1700107186413</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Module 5 review comments fixed">
+      <created>1700165357104</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1700165357104</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Module 5 review comments fixed">
+      <created>1700165489933</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1700165489933</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -537,90 +579,123 @@
     <MESSAGE value="Clean up the code as per review comments mentioned in PR" />
     <MESSAGE value="Module 4 code added for Test Runners,Data Drivern and Paralleization" />
     <MESSAGE value="pull 2 request review comments incorporated" />
-    <option name="LAST_COMMIT_MESSAGE" value="pull 2 request review comments incorporated" />
+    <MESSAGE value="Code Formatting comments incorporated" />
+    <MESSAGE value="Module 5 Home tasks implemented" />
+    <MESSAGE value="Module 5 review comments fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Module 5 review comments fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ui/LoginReportPortalPage.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>44</line>
+          <line>51</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>45</line>
+          <line>52</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>46</line>
+          <line>53</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ui/WidgetPage.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ui/WidgetPage.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/components/ui/DashboardTest.java</url>
-          <line>42</line>
+          <line>45</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/components/ui/DashboardTest.java</url>
-          <line>43</line>
+          <line>46</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/src/test/java/StepDefinition/DashboardTestSteps.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="16" />
+          <line>45</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="17" />
+          <line>46</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="18" />
+          <line>48</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="19" />
+          <line>49</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ui/WidgetPage.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="23" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ui/WidgetPage.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="24" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ui/WidgetPage.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="25" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

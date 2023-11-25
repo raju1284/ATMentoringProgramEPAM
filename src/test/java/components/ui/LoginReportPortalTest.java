@@ -27,6 +27,7 @@ public class LoginReportPortalTest extends BaseTest {
         Assert.assertEquals(loginReportPortalPage.notificationMessage(), "Signed in successfully");
         loginReportPortalPage.logout();
 
+
     }
 
     @DataProvider(name = "provideLoginTestData")
