@@ -23,12 +23,19 @@ dependencies {
     implementation 'io.github.bonigarcia:webdrivermanager:5.0.3'
     implementation 'io.rest-assured:rest-assured:5.3.0'
     implementation 'io.rest-assured:json-path:5.3.0'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.14'
+    implementation 'io.rest-assured:json-path:5.3.0'
     implementation 'io.cucumber:cucumber-java:7.14.0'
     implementation 'io.cucumber:cucumber-junit:7.14.0'
     implementation 'io.cucumber:cucumber-core:7.14.0'
     implementation 'io.cucumber:cucumber-picocontainer:7.14.0'
     implementation 'io.cucumber:cucumber-testng:7.14.0'
     implementation 'org.apache.maven.plugins:maven-surefire-plugin:3.2.2'
+    implementation 'org.projectlombok:lombok:1.18.24'
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.0'
+
 
 }
 
