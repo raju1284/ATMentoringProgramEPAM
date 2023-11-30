@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Remove the hardcoded project Name">
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/requests/AddWidget.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/requests/AddWidgetRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/requests/CreateDashboardRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/requests/WidgetPosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/requests/WidgetSize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/ServiceUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/ServiceUtilHttpClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/SharedData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/api/DashboardAPITestSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Features/api/DashbaordAPI.feature" afterDir="false" />
+    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Added Module 7 code for API Test automation using restassured">
+      <change afterPath="$PROJECT_DIR$/src/main/java/api/requests/RequestHeaders.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinition/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/CucumberTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/CucumberTestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/configFiles/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configFiles/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/ServiceUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/ServiceUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinition/api/DashboardAPITestSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/api/DashboardAPITestSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/api/DashbaordAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/api/DashbaordAPI.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -571,7 +561,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700172285756</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Added Module 7 code for API Test automation using restassured">
+      <created>1701223920678</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1701223920678</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -606,7 +603,8 @@
     <MESSAGE value="Module 5 Home tasks implemented" />
     <MESSAGE value="Module 5 review comments fixed" />
     <MESSAGE value="Remove the hardcoded project Name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove the hardcoded project Name" />
+    <MESSAGE value="Added Module 7 code for API Test automation using restassured" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Module 7 code for API Test automation using restassured" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

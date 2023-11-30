@@ -16,6 +16,7 @@
       Examples:
         |dashboardName|dashboardDesc|projectName|statusCode|errorCode|message|
         |apiTest6     |Test6        |Nagaraju_Dasari_Personal|409|4091|Resource 'apiTest6' already exists. You couldn't create the duplicate.|
+
     @Test3
     Scenario Outline: Negative Test- Add Dashboard in another project using API post request
       When User creates the dashboard with  given dashboard name "<dashboardName>" and description "<dashboardDesc>" under the Project "<projectName>"
@@ -79,6 +80,7 @@
       Examples:
         |dashboardId|projectName|statusCode|widgetName|widgetId|widgetType|errorCode|message|
         |141905     |Nagaraju_Dasari_Personal|404|Widget1|142130|statisticTrend|40422|Dashboard with ID '141905' not found on project 'nagaraju_dasari_personal'. Did you use correct Dashboard ID?|
+
     @Test10
     Scenario Outline: Positive Test - Delete widget  using API delete request
       When User deletes the widget in the dashboardId "<dashboardId>" under the Project "<projectName>" with widget Id "<widgetId>"

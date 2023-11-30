@@ -1,5 +1,6 @@
 package utilities;
 
+import api.requests.RequestHeaders;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -9,12 +10,10 @@ import io.restassured.response.Response;
 
 public class ServiceUtil {
 
-
+  RequestHeaders requestHeaders = new RequestHeaders();
     public Response postResponseFromService(Object requestObject, String url, String projectName, ObjectMapper objectMapper, String token) throws JsonProcessingException {
         return RestAssured.given().log().all()
-                .header("accept", "application/json")
-                .header("Content-Type", "application/json")
-                .header("Authorization", token)
+                .headers(requestHeaders.getHeaders(token))
                 .pathParam("projectName", projectName)
                 .body(objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(requestObject))
                 .when()
@@ -27,9 +26,7 @@ public class ServiceUtil {
 
     public Response getResponseFromGetDashboard(String url, String projectName, String dashboardId, String token) throws JsonProcessingException {
         return RestAssured.given().log().all()
-                .header("accept", "application/json")
-                .header("Content-Type", "application/json")
-                .header("Authorization", token)
+                .headers(requestHeaders.getHeaders(token))
                 .pathParam("projectName", projectName)
                 .pathParam("dashboardId", dashboardId)
                 .when()
@@ -42,9 +39,7 @@ public class ServiceUtil {
 
     public Response deleteResponseFromDeleteDashboard(String url, String projectName, String dashboardId, String token) throws JsonProcessingException {
         return RestAssured.given().log().all()
-                .header("accept", "application/json")
-                .header("Content-Type", "application/json")
-                .header("Authorization", token)
+                .headers(requestHeaders.getHeaders(token))
                 .pathParam("projectName", projectName)
                 .pathParam("dashboardId", dashboardId)
                 .when()
@@ -57,9 +52,7 @@ public class ServiceUtil {
 
     public Response putResponseFromAddWidgetToTheDashboard(Object requestObject, String url, String projectName, String dashboardId, ObjectMapper objectMapper, String token) throws JsonProcessingException {
         return RestAssured.given().log().all()
-                .header("accept", "application/json")
-                .header("Content-Type", "application/json")
-                .header("Authorization", token)
+                .headers(requestHeaders.getHeaders(token))
                 .pathParam("projectName", projectName)
                 .pathParam("dashboardId", dashboardId)
                 .body(objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL).writeValueAsString(requestObject))
@@ -73,9 +66,7 @@ public class ServiceUtil {
 
     public Response deleteResponseFromDeleteWidgetInTheDashboard(String url, String projectName, String dashboardId, String widgetId, String token) throws JsonProcessingException {
         return RestAssured.given().log().all()
-                .header("accept", "application/json")
-                .header("Content-Type", "application/json")
-                .header("Authorization", token)
+                .headers(requestHeaders.getHeaders(token))
                 .pathParam("projectName", projectName)
                 .pathParam("dashboardId", dashboardId)
                 .pathParam("widgetId", widgetId)
