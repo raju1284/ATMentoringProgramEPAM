@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Module 5 review comments fixed" />
+    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Added Module 7 code for API Test automation using restassured">
+      <change afterPath="$PROJECT_DIR$/src/main/java/api/requests/RequestHeaders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/ServiceUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/ServiceUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinition/api/DashboardAPITestSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/api/DashboardAPITestSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/api/DashbaordAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/api/DashbaordAPI.feature" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +52,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="module4" />
+        <entry key="$PROJECT_DIR$" value="module5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -191,7 +197,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="PACKAGE_NAME" value="runners" />
-      <option name="MAIN_CLASS_NAME" value="runners.DashboardTestRunner" />
+      <option name="MAIN_CLASS_NAME" value="runners.JunitTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
@@ -548,7 +554,21 @@
       <option name="project" value="LOCAL" />
       <updated>1700165489933</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Remove the hardcoded project Name">
+      <created>1700172285756</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1700172285756</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Added Module 7 code for API Test automation using restassured">
+      <created>1701223920678</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1701223920678</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -582,7 +602,9 @@
     <MESSAGE value="Code Formatting comments incorporated" />
     <MESSAGE value="Module 5 Home tasks implemented" />
     <MESSAGE value="Module 5 review comments fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Module 5 review comments fixed" />
+    <MESSAGE value="Remove the hardcoded project Name" />
+    <MESSAGE value="Added Module 7 code for API Test automation using restassured" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Module 7 code for API Test automation using restassured" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -690,11 +712,6 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
           <line>113</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java</url>
-          <line>114</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>

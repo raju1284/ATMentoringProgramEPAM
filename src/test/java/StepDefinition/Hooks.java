@@ -15,7 +15,7 @@ public class Hooks {
         loginReportPortalPage = testContext.getPageObjectManager().getLoginReportPortalPage();
     }
 
-    @After
+   // @After
     public void cleanUp() throws Exception {
         loginReportPortalPage.logout();
         testContext.getWebDriverManager().closeDriver();
