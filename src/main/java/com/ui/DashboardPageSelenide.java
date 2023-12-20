@@ -1,5 +1,8 @@
 package com.ui;
 
+import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,9 +11,11 @@ import org.openqa.selenium.interactions.Actions;
 import java.time.Duration;
 import java.util.List;
 
-public class DashboardPage extends BasePage {
+import static com.codeborne.selenide.Condition.text;
+
+public class DashboardPageSelenide extends BasePageSelenide {
     By dashboardMenu = By.xpath("//i[@class='sidebarButton__btn-icon--xc3y6']");
-    By dashboardAddNewButton = By.xpath("//span[text()='Add New Dashboard']");
+    By dashboardAddNewButton = By.xpath("//i[@class='ghostButton__icon--Y8b6g']");
     By dashboardName = By.xpath("//input[@placeholder='Enter dashboard name']");
     By dashboardDescription = By.xpath("//textarea[@placeholder='Enter dashboard description']");
     By dashboardSave = By.xpath("//button[text()='Add']");
@@ -27,14 +32,10 @@ public class DashboardPage extends BasePage {
     By currentUser = By.xpath("//div[@class='userBlock__username--xTuSF']");
     By userProfile = By.xpath("//div[@class='userBlock__user-block--Hrr33']");
 
-    public DashboardPage(WebDriver driver) {
-        super(driver);
-    }
-
-    public void addDashboard(String name, String description, String projectName) throws InterruptedException {
+    public void addDashboardSelenide(String name, String description, String projectName) throws InterruptedException {
         doClick(dashboardMenu);
-        selectProject(projectName);
-        driver.navigate().refresh();
+        selectProjectSelenide(projectName);
+        WebDriverRunner.getWebDriver().navigate().refresh();
         doClick(dashboardAddNewButton);
         sendKeys(dashboardName, name);
         sendKeys(dashboardDescription, description);
@@ -42,15 +43,16 @@ public class DashboardPage extends BasePage {
         doClick(notificationList);
     }
 
-    public void deleteDashboard(String dashName, String projectName) {
+    public void deleteDashboardSelenide(String dashName, String projectName) {
         doClick(dashboardMenu);
-        selectProject(projectName);
+        selectProjectSelenide(projectName);
         waitForElement(deleteList);
-        List<WebElement> delList = getLsitsOfElements(deleteList);
-        List<WebElement> dashNameList = getLsitsOfElements(deleteDashboardNameList);
+        ElementsCollection delList = Selenide.$$(deleteList);
+        ElementsCollection dashNameList = Selenide.$$(deleteDashboardNameList);
         for (int i = 0; i < delList.size(); i++) {
             for (int j = 0; j < dashNameList.size(); j++) {
-                if (dashNameList.get(j).getText().equalsIgnoreCase(dashName)) {
+                if (dashNameList.findBy(text(dashName)).exists()) ;
+                {
                     delList.get(i).click();
                     doClick(deleteButton);
                     doClick(notificationList);
@@ -61,56 +63,58 @@ public class DashboardPage extends BasePage {
         }
     }
 
-    public void editDashboard(String dashName) {
+    public void editDashboardSelenide(String dashName) {
         doClick(dashboardMenu);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        List<WebElement> dashNameList = getLsitsOfElements(deleteDashboardNameList);
+        waitForElement(deleteDashboardNameList);
+        ElementsCollection dashNameList = Selenide.$$(deleteDashboardNameList);
         for (int j = 0; j < dashNameList.size(); j++) {
-            if (dashNameList.get(j).getText().equalsIgnoreCase(dashName)) {
+            if (dashNameList.findBy(text(dashName)).exists()) {
                 dashNameList.get(j).click();
                 break;
             }
         }
     }
 
-    public void selectProject(String projectName) {
+    public void selectProjectSelenide(String projectName) {
         doClick(projectMenu);
-        List<WebElement> projList = driver.findElements(projectList);
+        ElementsCollection projList = Selenide.$$(projectList);
         for (int i = 0; i < projList.size(); i++) {
-            if (projList.get(i).getText().equalsIgnoreCase(projectName)) {
-                projList.get(i).click();
+            if (projList.findBy(text(projectName)).exists()) {
+                projList.findBy(text(projectName)).click();
                 break;
             }
         }
-
     }
 
-    public boolean dashboardDeleted(String dashName) {
+
+    public boolean dashboardDeletedSelenide(String dashName) {
         doClick(dashboardMenu);
-        selectProject(getProjectName());
+        selectProjectSelenide(getProjectNameSelenide());
         waitForElement(deleteDashboardNameList);
-        List<WebElement> dashNameList = getLsitsOfElements(deleteDashboardNameList);
+        ElementsCollection dashNameList = Selenide.$$(deleteDashboardNameList);
         for (int j = 0; j < dashNameList.size(); j++) {
-            if (dashNameList.get(j).getText().equalsIgnoreCase(dashName)) {
+            if (dashNameList.findBy(text(dashName)).exists()) {
                 return false;
             }
         }
         return true;
     }
 
-    public String getDashboardTitle() {
+
+    public String getDashboardTitleSelenide() {
         waitForElement(dashTitleElement);
         return getElementText(dashTitleElement);
     }
 
-    public String getProjectName() {
+    public String getProjectNameSelenide() {
         doClick(userProfile);
-        WebElement element = driver.findElement(currentUser);
-        Actions actions = new Actions(driver);
+        WebElement element = Selenide.$(currentUser);
+        Actions actions = new Actions(WebDriverRunner.getWebDriver());
         actions.moveToElement(element).perform();
-        String hoverText = element.getAttribute("title");
-        return hoverText + "_personal";
+        String hoverText = element.getText();
+        return hoverText + "_PERSONAL";
     }
+
 
     public By getDashboardAddNewButton() {
         return dashboardAddNewButton;

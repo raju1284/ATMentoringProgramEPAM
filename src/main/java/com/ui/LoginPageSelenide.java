@@ -11,7 +11,7 @@ import java.util.List;
 
 import static com.codeborne.selenide.Condition.text;
 
-public class LoginReportPortalPage extends BasePage {
+public class LoginPageSelenide extends BasePageSelenide {
 
     ///Report portal Login Page Locators and respective page methods will be coded here///
     By userName = By.xpath("//input[@name='login']");
@@ -23,50 +23,35 @@ public class LoginReportPortalPage extends BasePage {
 
     By welcomeText = By.xpath("//span[text()='Welcome,']");
     By notificationList = By.xpath("//div[@class='notificationList__notification-list--UEF9s']/div");
-
     By allDashboardsElement = By.xpath("//span[text()='All Dashboards']");
 
-    public LoginReportPortalPage(WebDriver driver) {
-        super(driver);
-    }
-
-    public BasePageSelenide basePageSelenide = new BasePageSelenide();
-
-    public void enterUserCredentials(String loginUser, String loginPassword) throws InterruptedException {
-
+    public void enterUserCredentialsSelenide(String loginUser, String loginPassword) {
         sendKeys(userName, loginUser);
         sendKeys(password, loginPassword);
     }
 
-    public void clickLoginButton() throws Exception {
+    public void clickLoginButtonSelenide() throws Exception {
         doClick(loginButton);
         doClick(notificationList);
     }
 
-    public void loginToReportPortal(String url, String userName, String password) throws Exception {
+    public void loginToReportPortalSelenide(String url, String userName, String password) throws Exception {
         navigateToUrl(url);
-        enterUserCredentials(userName, password);
-        clickLoginButton();
+        enterUserCredentialsSelenide(userName, password);
+        clickLoginButtonSelenide();
     }
 
-    public void logout() throws Exception {
+    public void logoutSelenide() throws Exception {
         doClick(userProfile);
         waitForElement(userProfileElements);
-        List<WebElement> profileWebElements = driver.findElements(userProfileElements);
-        for (int i = 0; i < profileWebElements.size(); i++) {
-            if (profileWebElements.get(i).getText().equalsIgnoreCase("Logout")) {
-                profileWebElements.get(i).click();
-                break;
-            }
-        }
+        Selenide.$$(userProfileElements).findBy(text("Logout")).click();
     }
 
-    public String notificationMessage() {
+    public String notificationMessageSelenide() {
         return getElementText(notificationList);
     }
 
-    public String allDashboardsText() {
+    public String allDashboardsTextSelenide() {
         return getElementText(allDashboardsElement);
     }
-
 }
