@@ -52,9 +52,12 @@ public class BaseTest {
         driver = new RemoteWebDriver(new URL(nodeURL), capabilities);
         return driver;
     }
+
     /// Close the Browser///
+>>>>>>> main
     public void driverClose() {
         this.driver.close();
         logger.info("Webdriver Closed successfully");
     }
 }
+
