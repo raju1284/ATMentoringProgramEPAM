@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Review comments incorporated">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ui/BasePageSelenide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ui/DashboardPageSelenide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ui/LoginPageSelenide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ui/WidgetPageSelenide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/components/ui/BaseSelenideTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/components/ui/DashboardTestSelenide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/components/ui/LoginReportPortalTestSelenide.java" afterDir="false" />
+    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Module 8 home tasks implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ui/DashboardPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ui/LoginReportPortalPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ui/LoginReportPortalPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/ServiceUtilHttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/ServiceUtilHttpClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -583,7 +571,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701382185457</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Module 8 home tasks implemented">
+      <created>1702436324462</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1702436324462</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -620,7 +615,8 @@
     <MESSAGE value="Remove the hardcoded project Name" />
     <MESSAGE value="Added Module 7 code for API Test automation using restassured" />
     <MESSAGE value="Review comments incorporated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Review comments incorporated" />
+    <MESSAGE value="Module 8 home tasks implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Module 8 home tasks implemented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
