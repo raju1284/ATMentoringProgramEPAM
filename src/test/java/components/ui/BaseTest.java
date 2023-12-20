@@ -58,7 +58,6 @@ public class BaseTest {
         return driver;
     }
 
-    /// Close the Browser///
     public void driverClose() {
         this.driver.close();
         logger.info("Webdriver Closed successfully");
