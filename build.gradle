@@ -40,6 +40,6 @@ dependencies {
 }
 
 test {
-    useTestNG()
-    //useJUnit()
+  //  useTestNG()
+    useJUnit()
     }

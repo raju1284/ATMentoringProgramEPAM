@@ -58,7 +58,7 @@ public class DashboardTest extends BaseTest {
         return testData.addWidgetTestData();
     }
 
-    @Test(priority = 4)
+     @Test(priority = 4)
     @AfterAll
     public void cleanUp() throws Exception {
         loginReportPortalPage.logout();
