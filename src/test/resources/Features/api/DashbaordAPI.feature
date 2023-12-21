@@ -1,11 +1,21 @@
   Feature: Dashboard API Tests
-    @Test1
-    Scenario Outline: Positive Test - Add Dashboard using API post request
-      When User creates the dashboard with  given dashboard name "<dashboardName>" and description "<dashboardDesc>" under the Project "<projectName>"
-      Then User receives "<statusCode>" status code
-      Examples:
-      |dashboardName|dashboardDesc|projectName|statusCode|
-      |apiTest8     |Test8        |Nagaraju_Dasari_Personal|201|
+
+#    @Test6
+#    Scenario Outline: Positive Test-Delete a Dashboard using API Delete request
+#      When User deletes the dashboard with given dashboard Id "<dashboardId>"  under the Project "<projectName>"
+#      Then User receives "<statusCode>" status code
+#
+#      Examples:
+#        |dashboardId|projectName|statusCode|
+#        |151293     |Nagaraju_Dasari_Personal|200|
+#
+#    @Test1
+#    Scenario Outline: Positive Test - Add Dashboard using API post request
+#      When User creates the dashboard with  given dashboard name "<dashboardName>" and description "<dashboardDesc>" under the Project "<projectName>"
+#      Then User receives "<statusCode>" status code
+#      Examples:
+#      |dashboardName|dashboardDesc|projectName|statusCode|
+#      |apiTest9     |Test9        |Nagaraju_Dasari_Personal|201|
 
     @Test2
     Scenario Outline: Negative Test- Add existing Dashboard using API post request
@@ -15,7 +25,7 @@
 
       Examples:
         |dashboardName|dashboardDesc|projectName|statusCode|errorCode|message|
-        |apiTest6     |Test6        |Nagaraju_Dasari_Personal|409|4091|Resource 'apiTest6' already exists. You couldn't create the duplicate.|
+        |apiTest8     |Test8        |Nagaraju_Dasari_Personal|409|4091|Resource 'apiTest8' already exists. You couldn't create the duplicate.|
 
     @Test3
     Scenario Outline: Negative Test- Add Dashboard in another project using API post request
@@ -34,7 +44,7 @@
       And User validates the response name "<name>" and description "<description>"
       Examples:
         |dashboardId|projectName|statusCode|name|description|
-        |141909     |Nagaraju_Dasari_Personal|200|apiTest6|Test6|
+        |151266     |Nagaraju_Dasari_Personal|200|apiTest6|Test6|
 
     @Test5
     Scenario Outline: Negative Test-Get a non existing Dashboard using API Get request
@@ -45,14 +55,7 @@
         |dashboardId|projectName|statusCode|errorCode|message|
         |14191     |Nagaraju_Dasari_Personal|404|40422|Dashboard with ID '14191' not found on project 'nagaraju_dasari_personal'. Did you use correct Dashboard ID?|
 
-    @Test6
-    Scenario Outline: Positive Test-Delete a Dashboard using API Delete request
-      When User deletes the dashboard with given dashboard Id "<dashboardId>"  under the Project "<projectName>"
-      Then User receives "<statusCode>" status code
 
-    Examples:
-        |dashboardId|projectName|statusCode|
-        |141909     |Nagaraju_Dasari_Personal|200|
 
     @Test7
     Scenario Outline: Negative Test-Delete a non existing Dashboard using API Get request
@@ -69,7 +72,7 @@
       Then User receives "<statusCode>" status code
       Examples:
         |dashboardId|projectName|statusCode|widgetName|widgetId|widgetType|
-        |141906     |Nagaraju_Dasari_Personal|200|Widget1|129984|statisticTrend|
+        |151246     |Nagaraju_Dasari_Personal|200|Widget1|151271|statisticTrend|
 
     @Test9
     Scenario Outline: Negative Test - Add widget to the non Dashboard using API put request
@@ -87,4 +90,4 @@
       Then User receives "<statusCode>" status code
       Examples:
         |dashboardId|projectName|statusCode|widgetId|
-        |141906     |Nagaraju_Dasari_Personal|200|129984|
+        |151246     |Nagaraju_Dasari_Personal|200|151271|
