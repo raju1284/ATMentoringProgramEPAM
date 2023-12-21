@@ -45,11 +45,20 @@ public class BaseTest {
 
     ///This method will set up the driver and return it///
     public WebDriver getDriver() throws IOException {
-        String nodeURL = "http://192.168.4.23:4444/wd/hub";
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setBrowserName("chrome");
-        capabilities.setPlatform(Platform.WIN10);
-        driver = new RemoteWebDriver(new URL(nodeURL), capabilities);
+        String browser = fr.getPropertyValue("browser");
+        Path resourceDirectory = Paths.get("src", "test", "resources");
+        String absolutePath = resourceDirectory.toFile().getAbsolutePath();
+        if (browser.equalsIgnoreCase("chrome")) {
+            String[] pathNames = {absolutePath, "\\drivers\\chromedriver.exe"};
+            String path = String.join(File.pathSeparator, pathNames);
+            System.out.println(path);
+            System.setProperty("webdriver.chrome.driver", path.replaceAll(";", ""));
+            ChromeOptions options = new ChromeOptions();
+            options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+            options.addArguments("--remote-allow-origins=*");
+            options.setCapability("ignore-certificate-errors", true);
+            driver = new ChromeDriver(options);
+        }
         return driver;
     }
 

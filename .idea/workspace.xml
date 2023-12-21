@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Module 8 home tasks implemented">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_24_2023_9_39_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_24_2023_9_39_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/components/ui/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/CucumberTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/CucumberTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Features/api/DashbaordAPI.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Features/api/DashbaordAPI.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/drivers/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/drivers/chromedriver.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,18 +77,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/resources/drivers&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New2/src/test/resources/drivers",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New2\src\test\resources\drivers" />
       <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\test\resources\drivers" />
       <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\test\resources" />
       <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\main" />
@@ -93,13 +99,13 @@
       <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\test\resources\TestNGXMLs" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TestNGRunner">
+  <component name="RunManager" selected="Gradle.GradleRun">
     <configuration name="GradleRun" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" value="-Dwebdriver.driver=chrome --info" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -108,6 +114,8 @@
             <option value="clean" />
             <option value="build" />
             <option value="test" />
+            <option value="--tests" />
+            <option value="&quot;runners.CucumberTestRunner&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -200,6 +208,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="TAMP-Advanced" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="TAMP-Advanced" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/java/runners/textng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TAMP-Advanced.test" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/runners/textng.xml" />
@@ -253,11 +274,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/resources/TestNGXMLs/textng.xml" />
-        <item itemvalue="Gradle.LoginTestRunner" />
-        <item itemvalue="Gradle.LoginReportPortalTest" />
         <item itemvalue="TestNG.C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/java/runners/textng.xml" />
+        <item itemvalue="TestNG.C:/Users/Nagaraju_Dasari/Desktop/ATMentoringProgramEPAM-New/src/test/resources/TestNGXMLs/textng.xml" />
         <item itemvalue="Gradle.TestNGRunner.openTheReportUrl (1)" />
+        <item itemvalue="Gradle.LoginReportPortalTest" />
+        <item itemvalue="Gradle.LoginTestRunner" />
       </list>
     </recent_temporary>
   </component>
