@@ -2,12 +2,23 @@ plugins {
     id 'java'
 }
 
+plugins {
+    id "org.sonarqube" version "4.4.1.3373"
+}
+
+sonar {
+    properties {
+        property "sonar.projectKey", "Automation"
+        property "sonar.projectName", "Automation"
+    }
+}
 group 'TAMP-Advanced'
 version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
+
 
 dependencies {
     implementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
