@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Jenkins files updated">
+    <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Build file updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
@@ -596,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703122211800</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Build file updated">
+      <created>1703128176538</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1703128176538</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -635,7 +642,8 @@
     <MESSAGE value="Review comments incorporated" />
     <MESSAGE value="Module 8 home tasks implemented" />
     <MESSAGE value="Jenkins files updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jenkins files updated" />
+    <MESSAGE value="Build file updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Build file updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
