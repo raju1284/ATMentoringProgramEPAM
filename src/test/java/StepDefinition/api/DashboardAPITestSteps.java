@@ -1,33 +1,56 @@
 package StepDefinition.api;
 
 import api.requests.*;
+import com.epam.reportportal.junit5.ReportPortalExtension;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.testng.Assert;
 import utilities.ReadPropertyFile;
 import utilities.SharedData;
+import utilities.SlackService;
 
 import java.io.IOException;
 
+@ExtendWith(ReportPortalExtension.class)
 public class DashboardAPITestSteps {
 
     SharedData sharedData = new SharedData();
     ReadPropertyFile fr = new ReadPropertyFile();
 
+    SlackService slackService = new SlackService();
+    private static final Logger LOGGER = LogManager.getLogger(DashboardAPITestSteps.class);
+
+    @Before
+    public void testStarted() throws IOException {
+        sharedData.setSlackMessage(SlackMessage.builder().text("Test has been Started").build());
+        slackService.postNotification(sharedData.getSlackMessage());
+
+    }
+
+    @After
+    public void testEnded() throws IOException {
+        sharedData.setSlackMessage(SlackMessage.builder().text("Test has been Finished").build());
+        slackService.postNotification(sharedData.getSlackMessage());
+
+    }
+
     @When("User creates the dashboard with  given dashboard name {string} and description {string} under the Project {string}")
     public void userCreatesDashboardUsingAPIPost(String dashName, String dashDescription, String projectName) throws IOException {
-        sharedData.setCreateDashboardRequest(CreateDashboardRequest.builder()
-                .name(dashName)
-                .description(dashDescription).build());
-        sharedData.setResponse(sharedData.getServiceUtil().postResponseFromService(
-                sharedData.getCreateDashboardRequest(), fr.getPropertyValue("PostDashboard.Url"), projectName, sharedData.getObjectMapper(), fr.getPropertyValue("AuthorizationToken")));
+        sharedData.setCreateDashboardRequest(CreateDashboardRequest.builder().name(dashName).description(dashDescription).build());
+        sharedData.setResponse(sharedData.getServiceUtil().postResponseFromService(sharedData.getCreateDashboardRequest(), fr.getPropertyValue("PostDashboard.Url"), projectName, sharedData.getObjectMapper(), fr.getPropertyValue("AuthorizationToken")));
     }
 
     @Then("User receives {string} status code")
     public void validateTheResponseStatusCode(String statusCode) {
         Assert.assertEquals(statusCode, String.valueOf(sharedData.getResponse().statusCode()));
+        LOGGER.info("Test Passed");
     }
 
     @And("User validates the error code {string} and message {string}")
@@ -38,8 +61,7 @@ public class DashboardAPITestSteps {
 
     @When("User gets the dashboard with given dashboard Id {string}  under the Project {string}")
     public void userGetTheSpecifiedDashboard(String dashboardId, String projectName) throws IOException {
-        sharedData.setResponse(sharedData.getServiceUtil().getResponseFromGetDashboard(
-                fr.getPropertyValue("GetDashboard.Url"), projectName, dashboardId, fr.getPropertyValue("AuthorizationToken")));
+        sharedData.setResponse(sharedData.getServiceUtil().getResponseFromGetDashboard(fr.getPropertyValue("GetDashboard.Url"), projectName, dashboardId, fr.getPropertyValue("AuthorizationToken")));
 
     }
 
@@ -51,8 +73,7 @@ public class DashboardAPITestSteps {
 
     @When("User deletes the dashboard with given dashboard Id {string}  under the Project {string}")
     public void userDeletesTheSpecifiedDashboard(String dashboardId, String projectName) throws IOException {
-        sharedData.setResponse(sharedData.getServiceUtil().deleteResponseFromDeleteDashboard(
-                fr.getPropertyValue("GetDashboard.Url"), projectName, dashboardId, fr.getPropertyValue("AuthorizationToken")));
+        sharedData.setResponse(sharedData.getServiceUtil().deleteResponseFromDeleteDashboard(fr.getPropertyValue("GetDashboard.Url"), projectName, dashboardId, fr.getPropertyValue("AuthorizationToken")));
 
     }
 
@@ -62,17 +83,13 @@ public class DashboardAPITestSteps {
         sharedData.setWidgetPosition(WidgetPosition.builder().positionX(0).positionY(0).build());
         sharedData.setWidgetOptions(WidgetOptions.builder().zoom(false).timeline("launch").viewMode("area-spline").build());
         sharedData.setAddWidget(AddWidget.builder().widgetId(Integer.parseInt(widgetId)).widgetName(widgetName).widgetType(widgetType).widgetOptions(sharedData.getWidgetOptions()).widgetPosition(sharedData.getWidgetPosition()).widgetSize(sharedData.getWidgetSize()).build());
-        sharedData.setAddWidgetRequest(AddWidgetRequest.builder()
-                .addWidget(sharedData.getAddWidget())
-                .build());
+        sharedData.setAddWidgetRequest(AddWidgetRequest.builder().addWidget(sharedData.getAddWidget()).build());
 
-        sharedData.setResponse(sharedData.getServiceUtil().putResponseFromAddWidgetToTheDashboard(
-                sharedData.getAddWidgetRequest(), fr.getPropertyValue("PutDashboard.Url"), projectName, dashboardId, sharedData.getObjectMapper(), fr.getPropertyValue("AuthorizationToken")));
+        sharedData.setResponse(sharedData.getServiceUtil().putResponseFromAddWidgetToTheDashboard(sharedData.getAddWidgetRequest(), fr.getPropertyValue("PutDashboard.Url"), projectName, dashboardId, sharedData.getObjectMapper(), fr.getPropertyValue("AuthorizationToken")));
     }
 
     @When("User deletes the widget in the dashboardId {string} under the Project {string} with widget Id {string}")
     public void userAddsTheWidgetToTheDashboard(String dashboardId, String projectName, String widgetId) throws IOException {
-        sharedData.setResponse(sharedData.getServiceUtil().deleteResponseFromDeleteWidgetInTheDashboard(
-                fr.getPropertyValue("DeleteWidget.Url"), projectName, dashboardId, widgetId, fr.getPropertyValue("AuthorizationToken")));
+        sharedData.setResponse(sharedData.getServiceUtil().deleteResponseFromDeleteWidgetInTheDashboard(fr.getPropertyValue("DeleteWidget.Url"), projectName, dashboardId, widgetId, fr.getPropertyValue("AuthorizationToken")));
     }
 }

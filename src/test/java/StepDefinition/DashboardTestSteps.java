@@ -5,11 +5,14 @@ import com.ui.LoginReportPortalPage;
 import com.ui.WidgetPage;
 import cucumber.TestContext;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 import utilities.ReadPropertyFile;
+import utilities.SlackService;
 
 import java.io.IOException;
 
@@ -20,6 +23,7 @@ public class DashboardTestSteps {
     DashboardPage dashboardPage;
     WidgetPage widgetPage;
     public ReadPropertyFile fr = new ReadPropertyFile();
+    SlackService slackService = new SlackService();
 
     public DashboardTestSteps(TestContext context) throws IOException {
         testContext = context;
@@ -27,6 +31,7 @@ public class DashboardTestSteps {
         dashboardPage = testContext.getPageObjectManager().getDashboardPage();
         widgetPage = testContext.getPageObjectManager().getWidgetPage();
     }
+
 
     @When("User creates the dashboard with  given dashboard name {string} and description {string}")
     public void userEntersTheDashboardDetails(String dashname, String dashdesc) throws Exception {
