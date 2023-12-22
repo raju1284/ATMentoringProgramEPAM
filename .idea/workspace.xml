@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2db57c46-7eeb-4731-9846-17374decb723" name="Changes" comment="Build file updated">
+      <change afterPath="$PROJECT_DIR$/src/main/java/api/requests/SlackMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utilities/SlackService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/META-INF/services/com.nordstrom.automation.junit.JUnitWatcher" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/META-INF/services/org.junit.jupiter.api.extension.Extension" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/configFiles/reportportal.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utilities/SharedData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utilities/SharedData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinition/DashboardTestSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/DashboardTestSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StepDefinition/api/DashboardAPITestSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StepDefinition/api/DashboardAPITestSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/configFiles/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configFiles/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +61,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="module7" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,7 +92,7 @@
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.language"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -95,7 +107,7 @@
       <recent name="C:\Users\Nagaraju_Dasari\Desktop\ATMentoringProgramEPAM-New\src\test\resources\TestNGXMLs" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GradleRun">
+  <component name="RunManager" selected="JUnit.JunitTest">
     <configuration name="GradleRun" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -194,12 +206,14 @@
     </configuration>
     <configuration name="JunitTest" type="JUnit" factoryName="JUnit">
       <module name="TAMP-Advanced.test" />
+      <shortenClasspath name="MANIFEST" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="PACKAGE_NAME" value="runners" />
-      <option name="MAIN_CLASS_NAME" value="runners.JunitTest" />
+      <option name="MAIN_CLASS_NAME" value="runners.CucumberTestRunner" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea " />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -610,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703129119782</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Build file updated">
+      <created>1703131777889</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1703131777889</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -682,7 +703,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/StepDefinition/DashboardTestSteps.java</url>
-          <line>56</line>
+          <line>61</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

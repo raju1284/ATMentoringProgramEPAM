@@ -22,4 +22,5 @@ public class SharedData {
     private WidgetPosition widgetPosition;
     private WidgetSize widgetSize;
     private CloseableHttpResponse closeableHttpResponse;
+    private SlackMessage slackMessage;
 }
